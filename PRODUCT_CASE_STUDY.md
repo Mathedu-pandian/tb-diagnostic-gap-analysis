@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-Over **3 million active tuberculosis (TB) cases** estimated by the World Health Organization (WHO) go undetected or unreported every year. This massive "missing cases" gap is primarily concentrated in low- and middle-income countries (LMICs) with limited laboratory infrastructure and centralized diagnostic bottlenecks.
+Over **2.3 million active tuberculosis (TB) cases** estimated by the World Health Organization (WHO) go undetected or unreported every year. This massive "missing cases" gap is primarily concentrated in low- and middle-income countries (LMICs) with limited laboratory infrastructure and centralized diagnostic bottlenecks.
 
 This project bridges **benchtop bio-engineering** (developing a gold nanoparticle-based polyclonal antibody lateral flow immunoassay for the Ag85B antigen; LOD = 0.6 ng/mL, R² = 0.972 at IIT Madras) with **global market intelligence**. By aggregating 24 years of WHO open data (2000–2024 across 200+ countries), I built an end-to-end Machine Learning and prioritization pipeline to identify top target countries where low-cost, point-of-care (POC) rapid diagnostic test strips deliver maximum epidemiological impact and product market fit.
 
