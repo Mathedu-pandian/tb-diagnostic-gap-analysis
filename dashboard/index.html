@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global TB Diagnostic Gap & Point-of-Care Market Intelligence Platform</title>
+    <title>Global TB Diagnostic Gap & Point-of-Care Intelligence Platform | IIT Madras</title>
     <!-- Modern Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,22 +12,24 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            --bg-dark: #0f172a;
-            --bg-card: rgba(30, 41, 59, 0.7);
-            --bg-card-hover: rgba(51, 65, 85, 0.8);
-            --border-glow: rgba(59, 130, 246, 0.3);
+            --bg-dark: #0b1329;
+            --bg-card: rgba(26, 38, 66, 0.75);
+            --bg-card-hover: rgba(40, 56, 92, 0.85);
+            --border-glow: rgba(59, 130, 246, 0.4);
             --primary: #3b82f6;
-            --primary-glow: rgba(59, 130, 246, 0.15);
+            --primary-hover: #2563eb;
+            --primary-glow: rgba(59, 130, 246, 0.2);
             --accent-green: #10b981;
             --accent-amber: #f59e0b;
             --accent-rose: #f43f5e;
             --accent-purple: #8b5cf6;
+            --accent-cyan: #06b6d4;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --text-dim: #64748b;
             --radius-lg: 16px;
             --radius-md: 10px;
-            --shadow-subtle: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            --shadow-subtle: 0 12px 35px -10px rgba(0, 0, 0, 0.6);
         }
 
         * {
@@ -42,15 +44,15 @@
             color: var(--text-main);
             min-height: 100vh;
             background-image: 
-                radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
+                radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 90% 90%, rgba(139, 92, 246, 0.12) 0%, transparent 45%);
             background-attachment: fixed;
             padding: 2rem;
             line-height: 1.5;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1440px;
             margin: 0 auto;
         }
 
@@ -62,6 +64,8 @@
             margin-bottom: 2rem;
             padding-bottom: 1.5rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .brand-badge {
@@ -69,12 +73,12 @@
             align-items: center;
             gap: 0.5rem;
             background: rgba(59, 130, 246, 0.15);
-            border: 1px solid rgba(59, 130, 246, 0.3);
+            border: 1px solid rgba(59, 130, 246, 0.35);
             color: var(--primary);
             padding: 0.35rem 0.85rem;
             border-radius: 9999px;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: 0.5rem;
@@ -83,7 +87,7 @@
         .header-title h1 {
             font-size: 2.2rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.02em;
@@ -97,7 +101,8 @@
 
         .header-actions {
             display: flex;
-            gap: 1rem;
+            gap: 0.75rem;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -107,7 +112,7 @@
             padding: 0.65rem 1.25rem;
             border-radius: var(--radius-md);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             cursor: pointer;
             transition: all 0.2s ease;
             text-decoration: none;
@@ -136,6 +141,17 @@
             border-color: rgba(255, 255, 255, 0.3);
         }
 
+        .btn-success {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+        }
+
         /* KPI Cards Grid */
         .kpi-grid {
             display: grid;
@@ -146,7 +162,7 @@
 
         .kpi-card {
             background: var(--bg-card);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(14px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: var(--radius-lg);
             padding: 1.5rem;
@@ -176,13 +192,14 @@
             justify-content: space-between;
             align-items: center;
             color: var(--text-muted);
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
             margin-bottom: 0.5rem;
         }
 
         .kpi-value {
-            font-size: 2rem;
+            font-size: 2.1rem;
             font-weight: 800;
             color: var(--text-main);
             letter-spacing: -0.03em;
@@ -198,16 +215,17 @@
         .tabs {
             display: flex;
             gap: 0.5rem;
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(15, 23, 42, 0.7);
             padding: 0.35rem;
             border-radius: var(--radius-md);
             border: 1px solid rgba(255, 255, 255, 0.08);
             margin-bottom: 2rem;
             width: fit-content;
+            flex-wrap: wrap;
         }
 
         .tab-btn {
-            padding: 0.6rem 1.25rem;
+            padding: 0.65rem 1.25rem;
             border-radius: 8px;
             font-size: 0.9rem;
             font-weight: 600;
@@ -221,7 +239,7 @@
         .tab-btn.active {
             background: var(--primary);
             color: white;
-            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 2px 10px rgba(59, 130, 246, 0.4);
         }
 
         .tab-content {
@@ -235,7 +253,7 @@
         /* Content Section Cards */
         .section-card {
             background: var(--bg-card);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(14px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: var(--radius-lg);
             padding: 1.75rem;
@@ -248,6 +266,8 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .section-title {
@@ -260,6 +280,62 @@
 
         .section-title span {
             color: var(--primary);
+        }
+
+        /* Interactive Simulator Panel */
+        .simulator-panel {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .simulator-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .simulator-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .sliders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .slider-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .slider-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .slider-value {
+            color: var(--accent-cyan);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: var(--primary);
+            cursor: pointer;
         }
 
         /* Table Styling */
@@ -278,12 +354,30 @@
         }
 
         th {
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(15, 23, 42, 0.95);
             color: var(--text-muted);
             font-weight: 600;
             padding: 1rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             white-space: nowrap;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.2s ease;
+        }
+
+        th:hover {
+            color: var(--primary);
+        }
+
+        th .sort-icon {
+            font-size: 0.75rem;
+            margin-left: 0.3rem;
+            opacity: 0.5;
+        }
+
+        th.active-sort .sort-icon {
+            opacity: 1;
+            color: var(--primary);
         }
 
         td {
@@ -293,8 +387,13 @@
             white-space: nowrap;
         }
 
-        tr:hover {
-            background: rgba(59, 130, 246, 0.05);
+        tr.clickable-row {
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        tr.clickable-row:hover {
+            background: rgba(59, 130, 246, 0.12);
         }
 
         .badge {
@@ -305,16 +404,16 @@
             font-weight: 700;
         }
 
-        .badge-high {
-            background: rgba(244, 63, 94, 0.15);
+        .badge-phase1 {
+            background: rgba(244, 63, 94, 0.18);
             color: var(--accent-rose);
-            border: 1px solid rgba(244, 63, 94, 0.3);
+            border: 1px solid rgba(244, 63, 94, 0.35);
         }
 
-        .badge-med {
-            background: rgba(245, 158, 11, 0.15);
+        .badge-phase2 {
+            background: rgba(245, 158, 11, 0.18);
             color: var(--accent-amber);
-            border: 1px solid rgba(245, 158, 11, 0.3);
+            border: 1px solid rgba(245, 158, 11, 0.35);
         }
 
         .badge-region {
@@ -329,6 +428,7 @@
             gap: 1rem;
             margin-bottom: 1.25rem;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .search-input, .select-input {
@@ -347,7 +447,7 @@
         }
 
         .search-input {
-            min-width: 250px;
+            min-width: 260px;
         }
 
         /* Grid Layouts */
@@ -365,7 +465,7 @@
 
         .chart-container {
             position: relative;
-            height: 340px;
+            height: 350px;
             width: 100%;
         }
 
@@ -398,11 +498,97 @@
 
         .mono-tag {
             font-family: 'JetBrains Mono', monospace;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 0.15rem 0.4rem;
+            background: rgba(0, 0, 0, 0.35);
+            padding: 0.15rem 0.45rem;
             border-radius: 4px;
             font-size: 0.82rem;
             color: #38bdf8;
+        }
+
+        /* Modal Drawer */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 19, 41, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-card {
+            background: var(--bg-dark);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 650px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 2rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+            position: relative;
+            animation: modalFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--text-muted);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: rgba(244, 63, 94, 0.3);
+            color: white;
+        }
+
+        .modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.25rem 0;
+        }
+
+        .modal-stat {
+            background: rgba(30, 41, 59, 0.6);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .modal-stat-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .modal-stat-val {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: white;
+            margin-top: 0.25rem;
         }
 
         footer {
@@ -420,13 +606,14 @@
         <!-- Header -->
         <header>
             <div class="header-title">
-                <div class="brand-badge">⚡ Biotech & HealthTech Product Portfolio</div>
-                <h1>TB Diagnostic Gap & Point-of-Care Market Intelligence</h1>
-                <p>Strategic Go-To-Market (GTM) Targeting Model for Polyclonal Antibody Lateral Flow Immunoassays (LFA)</p>
+                <div class="brand-badge">🔬 IIT Madras Research Group • Department of Biomedical Engineering</div>
+                <h1>Global TB Diagnostic Gap & Point-of-Care Market Intelligence</h1>
+                <p>Translational Deployment Model for Ag85B Polyclonal Antibody Lateral Flow Immunoassays (LFA)</p>
             </div>
             <div class="header-actions">
-                <a href="../README.md" class="btn btn-outline">📄 Product PRD</a>
-                <a href="https://github.com/Mathedu-pandian" target="_blank" class="btn btn-primary">🐙 GitHub Profile</a>
+                <a href="../PRODUCT_CASE_STUDY.md" class="btn btn-outline">📄 Strategy Report</a>
+                <button onclick="exportCSV()" class="btn btn-success">📥 Export Filtered CSV</button>
+                <a href="https://github.com/Mathedu-pandian/tb-diagnostic-gap-analysis" target="_blank" class="btn btn-primary">🐙 GitHub Repo</a>
             </div>
         </header>
 
@@ -448,7 +635,7 @@
                 <div class="kpi-subtext">Mean incidence 472/100k despite top lab budgets</div>
             </div>
             <div class="kpi-card" style="--card-accent: var(--accent-green);">
-                <div class="kpi-header">TARGET ASSAY SPECIFICATIONS</div>
+                <div class="kpi-header">TARGET ASSAY SENSITIVITY</div>
                 <div class="kpi-value">0.6 ng/mL</div>
                 <div class="kpi-subtext">Ag85B antigen limit of detection (R² = 0.972)</div>
             </div>
@@ -456,10 +643,10 @@
 
         <!-- Navigation Tabs -->
         <div class="tabs">
-            <button class="tab-btn active" onclick="switchTab('target-matrix')">🎯 Priority Target Matrix</button>
-            <button class="tab-btn" onclick="switchTab('ml-insights')">🧠 ML & SHAP Drivers</button>
-            <button class="tab-btn" onclick="switchTab('archetypes')">🧩 Country Archetypes</button>
-            <button class="tab-btn" onclick="switchTab('prd-overview')">📋 Product Case Study (PRD)</button>
+            <button class="tab-btn active" onclick="switchTab('target-matrix', this)">🎯 Priority Target Matrix</button>
+            <button class="tab-btn" onclick="switchTab('ml-insights', this)">🧠 ML & SHAP Drivers</button>
+            <button class="tab-btn" onclick="switchTab('archetypes', this)">🧩 Country Archetypes</button>
+            <button class="tab-btn" onclick="switchTab('prd-overview', this)">📋 Team Strategy Document</button>
         </div>
 
         <!-- Tab 1: Priority Target Matrix -->
@@ -467,12 +654,52 @@
             <div class="section-card">
                 <div class="section-header">
                     <div class="section-title">
-                        <span>📊</span> Priority Target Screener (Top 20 Countries)
+                        <span>📊</span> Priority Target Screener & Decision Matrix
+                    </div>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Click any country row to inspect full health system details</span>
+                </div>
+
+                <!-- Interactive Simulator Panel -->
+                <div class="simulator-panel">
+                    <div class="simulator-header">
+                        <div class="simulator-title">🎛️ Interactive Strategy Weight Simulator</div>
+                        <button onclick="resetWeights()" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.78rem;">Reset Default Weights</button>
+                    </div>
+                    <div class="sliders-grid">
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>Diagnostic Gap % Weight:</span>
+                                <span id="wGapVal" class="slider-value">40%</span>
+                            </div>
+                            <input type="range" id="wGap" min="0" max="100" value="40" oninput="updateWeights()">
+                        </div>
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>Incidence / 100k Weight:</span>
+                                <span id="wIncVal" class="slider-value">30%</span>
+                            </div>
+                            <input type="range" id="wInc" min="0" max="100" value="30" oninput="updateWeights()">
+                        </div>
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>Inverse RDx Access Weight:</span>
+                                <span id="wRdxVal" class="slider-value">20%</span>
+                            </div>
+                            <input type="range" id="wRdx" min="0" max="100" value="20" oninput="updateWeights()">
+                        </div>
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>Inverse Lab Budget Weight:</span>
+                                <span id="wBudVal" class="slider-value">10%</span>
+                            </div>
+                            <input type="range" id="wBud" min="0" max="100" value="10" oninput="updateWeights()">
+                        </div>
                     </div>
                 </div>
+
                 <div class="filter-controls">
-                    <input type="text" id="searchInput" class="search-input" placeholder="Search by country or code..." onkeyup="filterTable()">
-                    <select id="regionFilter" class="select-input" onchange="filterTable()">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search by country or ISO3 code..." onkeyup="filterAndRender()">
+                    <select id="regionFilter" class="select-input" onchange="filterAndRender()">
                         <option value="">All WHO Regions</option>
                         <option value="AFR">AFR (Africa)</option>
                         <option value="WPR">WPR (Western Pacific)</option>
@@ -481,22 +708,27 @@
                         <option value="AMR">AMR (Americas)</option>
                         <option value="EUR">EUR (Europe)</option>
                     </select>
+                    <select id="tierFilter" class="select-input" onchange="filterAndRender()">
+                        <option value="">All Deployment Phases</option>
+                        <option value="Phase 1 Target">Phase 1 Target</option>
+                        <option value="Phase 2 Expansion">Phase 2 Expansion</option>
+                    </select>
                 </div>
 
                 <div class="table-responsive">
                     <table id="targetTable">
                         <thead>
                             <tr>
-                                <th>Rank</th>
-                                <th>ISO3</th>
-                                <th>Country</th>
-                                <th>WHO Region</th>
-                                <th>Incidence / 100k</th>
-                                <th>Missing Cases</th>
-                                <th>Diagnostic Gap %</th>
-                                <th>Case Detection Rate</th>
-                                <th>Priority Score</th>
-                                <th>GTM Tier</th>
+                                <th onclick="sortTable('rank')">Rank <span class="sort-icon" id="sort-rank">▼</span></th>
+                                <th onclick="sortTable('iso3')">ISO3 <span class="sort-icon" id="sort-iso3"></span></th>
+                                <th onclick="sortTable('country')">Country <span class="sort-icon" id="sort-country"></span></th>
+                                <th onclick="sortTable('region')">WHO Region <span class="sort-icon" id="sort-region"></span></th>
+                                <th onclick="sortTable('inc')">Incidence / 100k <span class="sort-icon" id="sort-inc"></span></th>
+                                <th onclick="sortTable('gapNum')">Missing Cases <span class="sort-icon" id="sort-gapNum"></span></th>
+                                <th onclick="sortTable('gapPct')">Diagnostic Gap % <span class="sort-icon" id="sort-gapPct"></span></th>
+                                <th onclick="sortTable('cdr')">Case Detection Rate <span class="sort-icon" id="sort-cdr"></span></th>
+                                <th onclick="sortTable('score')">Priority Score <span class="sort-icon" id="sort-score"></span></th>
+                                <th>Deployment Phase</th>
                             </tr>
                         </thead>
                         <tbody id="tableBody">
@@ -527,10 +759,10 @@
                         </div>
                     </div>
                     <div class="prd-section">
-                        <h3>1. Financing & Diagnostic Infrastructure Rule Detection</h3>
+                        <h3>1. Financing & Lab Budget Rule Detection</h3>
                         <p>Laboratory budget per 100k population and rapid diagnostic test (RDx) coverage are the strongest linear and non-linear predictors of case detection rate.</p>
                         
-                        <h3>2. Funding Dependency Bottleneck</h3>
+                        <h3>2. Donor Dependency Bottleneck</h3>
                         <p>High donor dependency (>75%) correlates strongly with erratic diagnostic coverage, emphasizing the market fit for self-sustaining, low-unit-cost point-of-care kits.</p>
                         
                         <h3>3. Preserved Out-of-Fold Performance</h3>
@@ -554,27 +786,27 @@
                     </div>
                     <div class="prd-section">
                         <h3>Cluster 1: High Budget, High Diagnostic Gap (Prime LFA Target)</h3>
-                        <p><strong>9 Countries</strong> (e.g. Philippines, PNG, Angola) with high mean incidence (472/100k) and ~50% diagnostic gaps despite top lab budgets. <span class="mono-tag">GTM Strategy: High-throughput POC triage</span></p>
+                        <p><strong>9 Countries</strong> (e.g. Philippines, PNG, Angola) with high mean incidence (472/100k) and ~50% diagnostic gaps despite top lab budgets. <span class="mono-tag">Strategy: High-throughput POC triage</span></p>
 
                         <h3>Cluster 2: Severely Under-Resourced & Weak Infrastructure</h3>
-                        <p>Countries with minimal lab funding per capita and low treatment success. <span class="mono-tag">GTM Strategy: Global Fund donor-backed procurement</span></p>
+                        <p>Countries with minimal lab funding per capita and low treatment success. <span class="mono-tag">Strategy: Global Fund grant-backed procurement</span></p>
 
                         <h3>Cluster 3: Low Rapid Test Access, Moderate Performance</h3>
-                        <p>Higher baseline lab capacity but missing rapid POC tests. <span class="mono-tag">GTM Strategy: Direct replacement of direct microscopy</span></p>
+                        <p>Higher baseline lab capacity but missing rapid POC tests. <span class="mono-tag">Strategy: Direct replacement of direct microscopy</span></p>
 
                         <h3>Cluster 4: High Performing / Low Burden Systems</h3>
-                        <p>Low incidence, high case detection rate (>85%). <span class="mono-tag">GTM Strategy: Surveillance & low-volume screening</span></p>
+                        <p>Low incidence, high case detection rate (>85%). <span class="mono-tag">Strategy: Surveillance & low-volume screening</span></p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Tab 4: Product PRD Overview -->
+        <!-- Tab 4: Product Strategy Overview -->
         <div id="prd-overview" class="tab-content">
             <div class="section-card">
                 <div class="prd-section">
-                    <h2>📋 Product Strategy Case Study: LFA Diagnostic Go-To-Market</h2>
-                    <p><em>Connecting bench-top antibody engineering with global market intelligence.</em></p>
+                    <h2>📋 Global TB Diagnostic Gap & Strategy Report</h2>
+                    <p><em>Department of Biomedical Engineering, Indian Institute of Technology Madras</em></p>
 
                     <h3>1. Executive Vision</h3>
                     <p>To eliminate the 3+ million annual undetected tuberculosis cases by deploying low-cost, gold-nanoparticle polyclonal antibody lateral flow immunoassays (Ag85B antigen) into health systems with the highest diagnostic infrastructure friction.</p>
@@ -587,11 +819,10 @@
                         <li><strong>Cost Target:</strong> <$1.50 per strip (vs $10–30 for PCR/GeneXpert)</li>
                     </ul>
 
-                    <h3>3. Key Strategic PM Metrics (OKRs & KPIs)</h3>
+                    <h3>3. Research Team Strategic Rationale</h3>
                     <ul>
-                        <li><strong>Target Market Reach:</strong> Top 20 priority countries covering >65% of global undetected cases.</li>
-                        <li><strong>Diagnostic Yield Impact:</strong> Increase baseline case detection rate in target countries from ~45% to >75%.</li>
-                        <li><strong>Procurement Efficiency:</strong> Reduce diagnostic cost per detected case by 60% in high donor-dependent regions.</li>
+                        <li><strong>Model Selection:</strong> Random Forest + SHAP chosen over black-box models to provide clear, interpretable feature rules for health ministry procurement officials.</li>
+                        <li><strong>Cross-Section Alignment:</strong> 2021 cross-section selected due to optimal data completeness across burden, notifications, outcomes, and budgets.</li>
                     </ul>
                 </div>
             </div>
@@ -599,41 +830,202 @@
 
         <!-- Footer -->
         <footer>
-            <p>Designed for Product Management Portfolio Showcase • Data Source: WHO Global Tuberculosis Programme (2000–2024)</p>
-            <p style="margin-top: 0.35rem; color: var(--text-muted);">Developed by Mathedu Pandian (Maddy) • IIT Madras Biomedical Engineering</p>
+            <p>IIT Madras Biomedical Engineering Research Group • Data Source: WHO Global Tuberculosis Programme (2000–2024)</p>
+            <p style="margin-top: 0.35rem; color: var(--text-muted);">Lead Investigator: Mathedu Pandian (Maddy) • IIT Madras</p>
         </footer>
     </div>
 
+    <!-- Country Detail Modal -->
+    <div id="countryModal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-card" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModalDirect()">✕</button>
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                <h2 id="modalCountryName" style="font-size: 1.6rem; color: white;">Country Name</h2>
+                <span id="modalISO3" class="mono-tag" style="font-size: 0.9rem;">ISO3</span>
+                <span id="modalRegion" class="badge badge-region">Region</span>
+            </div>
+            <p id="modalTier" style="color: var(--accent-rose); font-weight: 700; font-size: 0.9rem;">Phase 1 Target</p>
+
+            <div class="modal-grid">
+                <div class="modal-stat">
+                    <div class="modal-stat-label">PRIORITY SCORE</div>
+                    <div id="modalScore" class="modal-stat-val" style="color: var(--accent-green);">0.855</div>
+                </div>
+                <div class="modal-stat">
+                    <div class="modal-stat-label">ESTIMATED INCIDENCE</div>
+                    <div id="modalInc" class="modal-stat-val">622 / 100k</div>
+                </div>
+                <div class="modal-stat">
+                    <div class="modal-stat-label">MISSING UNDETECTED CASES</div>
+                    <div id="modalGapNum" class="modal-stat-val" style="color: var(--accent-rose);">33,127</div>
+                </div>
+                <div class="modal-stat">
+                    <div class="modal-stat-label">DIAGNOSTIC GAP %</div>
+                    <div id="modalGapPct" class="modal-stat-val">53.4%</div>
+                </div>
+                <div class="modal-stat">
+                    <div class="modal-stat-label">CASE DETECTION RATE</div>
+                    <div id="modalCDR" class="modal-stat-val">46.0%</div>
+                </div>
+                <div class="modal-stat">
+                    <div class="modal-stat-label">POPULATION</div>
+                    <div id="modalPop" class="modal-stat-val">10.0M</div>
+                </div>
+            </div>
+
+            <div class="prd-section">
+                <h3 style="font-size: 1rem; margin-top: 1rem;">Recommended Deployment Strategy</h3>
+                <p id="modalStrategyText" style="font-size: 0.9rem; color: #cbd5e1;">Deploy LFA cassettes at primary healthcare centers for rapid high-throughput screening prior to molecular lab referral.</p>
+            </div>
+        </div>
+    </div>
+
     <script>
-        const targetData = [
-            { rank: 1, iso3: "PNG", country: "Papua New Guinea", region: "WPR", inc: 622.0, gapNum: 33127, gapPct: 53.4, cdr: 46.0, score: 0.855, tier: "Tier 1 Priority" },
-            { rank: 2, iso3: "MNG", country: "Mongolia", region: "WPR", inc: 421.0, gapNum: 11291, gapPct: 80.7, cdr: 19.0, score: 0.786, tier: "Tier 1 Priority" },
-            { rank: 3, iso3: "DJI", country: "Djibouti", region: "EMR", inc: 392.0, gapNum: 2601, gapPct: 59.1, cdr: 41.0, score: 0.782, tier: "Tier 1 Priority" },
-            { rank: 4, iso3: "MMR", country: "Myanmar", region: "SEA", inc: 353.0, gapNum: 123590, gapPct: 65.7, cdr: 34.0, score: 0.781, tier: "Tier 1 Priority" },
-            { rank: 5, iso3: "SSD", country: "South Sudan", region: "AFR", inc: 339.0, gapNum: 19532, gapPct: 52.8, cdr: 47.0, score: 0.721, tier: "Tier 1 Priority" },
-            { rank: 6, iso3: "LSO", country: "Lesotho", region: "AFR", inc: 606.0, gapNum: 9510, gapPct: 67.9, cdr: 33.0, score: 0.718, tier: "Tier 1 Priority" },
-            { rank: 7, iso3: "AGO", country: "Angola", region: "AFR", inc: 371.0, gapNum: 66309, gapPct: 51.8, cdr: 48.0, score: 0.712, tier: "Tier 1 Priority" },
-            { rank: 8, iso3: "COD", country: "DR Congo", region: "AFR", inc: 401.0, gapNum: 182592, gapPct: 46.0, cdr: 54.0, score: 0.697, tier: "Tier 1 Priority" },
-            { rank: 9, iso3: "KHM", country: "Cambodia", region: "WPR", inc: 279.0, gapNum: 25411, gapPct: 54.1, cdr: 46.0, score: 0.690, tier: "Tier 1 Priority" },
-            { rank: 10, iso3: "CAF", country: "Central African Rep", region: "AFR", inc: 446.0, gapNum: 9784, gapPct: 42.5, cdr: 58.0, score: 0.681, tier: "Tier 1 Priority" },
-            { rank: 11, iso3: "KIR", country: "Kiribati", region: "WPR", inc: 547.0, gapNum: 370, gapPct: 52.9, cdr: 47.0, score: 0.681, tier: "Tier 2 Expansion" },
-            { rank: 12, iso3: "SLE", country: "Sierra Leone", region: "AFR", inc: 395.0, gapNum: 14449, gapPct: 45.2, cdr: 55.0, score: 0.662, tier: "Tier 2 Expansion" },
-            { rank: 13, iso3: "SRB", country: "Serbia", region: "EUR", inc: 19.0, gapNum: 855, gapPct: 65.8, cdr: 34.0, score: 0.635, tier: "Tier 2 Expansion" },
-            { rank: 14, iso3: "GNQ", country: "Equatorial Guinea", region: "AFR", inc: 211.0, gapNum: 1893, gapPct: 51.2, cdr: 49.0, score: 0.634, tier: "Tier 2 Expansion" },
-            { rank: 15, iso3: "HTI", country: "Haiti", region: "AMR", inc: 209.0, gapNum: 13593, gapPct: 56.6, cdr: 44.0, score: 0.631, tier: "Tier 2 Expansion" },
-            { rank: 16, iso3: "GAB", country: "Gabon", region: "AFR", inc: 401.0, gapNum: 4427, gapPct: 46.6, cdr: 53.0, score: 0.619, tier: "Tier 2 Expansion" },
-            { rank: 17, iso3: "NPL", country: "Nepal", region: "SEA", inc: 230.0, gapNum: 39748, gapPct: 58.5, cdr: 42.0, score: 0.609, tier: "Tier 2 Expansion" },
-            { rank: 18, iso3: "PHL", country: "Philippines", region: "WPR", inc: 579.0, gapNum: 333436, gapPct: 50.9, cdr: 49.0, score: 0.607, tier: "Tier 2 Expansion" },
-            { rank: 19, iso3: "TLS", country: "Timor-Leste", region: "SEA", inc: 398.0, gapNum: 2207, gapPct: 40.9, cdr: 59.0, score: 0.607, tier: "Tier 2 Expansion" },
-            { rank: 20, iso3: "BWA", country: "Botswana", region: "AFR", inc: 241.0, gapNum: 3450, gapPct: 59.5, cdr: 41.0, score: 0.598, tier: "Tier 2 Expansion" }
+        const rawCountryData = [
+            { rank: 1, iso3: "PNG", country: "Papua New Guinea", region: "WPR", inc: 622.0, gapNum: 33127, gapPct: 53.4, cdr: 46.0, rdx: 25.0, budgetLab: 200.0, pop: 10012899, tier: "Phase 1 Target" },
+            { rank: 2, iso3: "MNG", country: "Mongolia", region: "WPR", inc: 421.0, gapNum: 11291, gapPct: 80.7, cdr: 19.0, rdx: 48.4, budgetLab: 396.0, pop: 3339678, tier: "Phase 1 Target" },
+            { rank: 3, iso3: "DJI", country: "Djibouti", region: "EMR", inc: 392.0, gapNum: 2601, gapPct: 59.1, cdr: 41.0, rdx: 15.0, budgetLab: 150.0, pop: 1121254, tier: "Phase 1 Target" },
+            { rank: 4, iso3: "MMR", country: "Myanmar", region: "SEA", inc: 353.0, gapNum: 123590, gapPct: 65.7, cdr: 34.0, rdx: 45.0, budgetLab: 300.0, pop: 53387099, tier: "Phase 1 Target" },
+            { rank: 5, iso3: "SSD", country: "South Sudan", region: "AFR", inc: 339.0, gapNum: 19532, gapPct: 52.8, cdr: 47.0, rdx: 10.0, budgetLab: 92.0, pop: 10865777, tier: "Phase 1 Target" },
+            { rank: 6, iso3: "LSO", country: "Lesotho", region: "AFR", inc: 606.0, gapNum: 9510, gapPct: 67.9, cdr: 33.0, rdx: 84.8, budgetLab: 826.0, pop: 2261539, tier: "Phase 1 Target" },
+            { rank: 7, iso3: "AGO", country: "Angola", region: "AFR", inc: 371.0, gapNum: 66309, gapPct: 51.8, cdr: 48.0, rdx: 20.0, budgetLab: 475.0, pop: 34532427, tier: "Phase 1 Target" },
+            { rank: 8, iso3: "COD", country: "DR Congo", region: "AFR", inc: 401.0, gapNum: 182592, gapPct: 46.0, cdr: 54.0, rdx: 9.4, budgetLab: 120.0, pop: 99148925, tier: "Phase 1 Target" },
+            { rank: 9, iso3: "KHM", country: "Cambodia", region: "WPR", inc: 279.0, gapNum: 25411, gapPct: 54.1, cdr: 46.0, rdx: 30.0, budgetLab: 259.0, pop: 16974300, tier: "Phase 1 Target" },
+            { rank: 10, iso3: "CAF", country: "Central African Rep", region: "AFR", inc: 446.0, gapNum: 9784, gapPct: 42.5, cdr: 58.0, rdx: 19.7, budgetLab: 109.0, pop: 5112092, tier: "Phase 1 Target" },
+            { rank: 11, iso3: "KIR", country: "Kiribati", region: "WPR", inc: 547.0, gapNum: 370, gapPct: 52.9, cdr: 47.0, rdx: 67.9, budgetLab: 182.0, pop: 128371, tier: "Phase 2 Expansion" },
+            { rank: 12, iso3: "SLE", country: "Sierra Leone", region: "AFR", inc: 395.0, gapNum: 14449, gapPct: 45.2, cdr: 55.0, rdx: 24.1, budgetLab: 86.0, pop: 8094608, tier: "Phase 2 Expansion" },
+            { rank: 13, iso3: "SRB", country: "Serbia", region: "EUR", inc: 19.0, gapNum: 855, gapPct: 65.8, cdr: 34.0, rdx: 15.0, budgetLab: 50.0, pop: 6835431, tier: "Phase 2 Expansion" },
+            { rank: 14, iso3: "GNQ", country: "Equatorial Guinea", region: "AFR", inc: 211.0, gapNum: 1893, gapPct: 51.2, cdr: 49.0, rdx: 3.9, budgetLab: 275.0, pop: 1758790, tier: "Phase 2 Expansion" },
+            { rank: 15, iso3: "HTI", country: "Haiti", region: "AMR", inc: 209.0, gapNum: 13593, gapPct: 56.6, cdr: 44.0, rdx: 22.9, budgetLab: 104.0, pop: 11374584, tier: "Phase 2 Expansion" },
+            { rank: 16, iso3: "GAB", country: "Gabon", region: "AFR", inc: 401.0, gapNum: 4427, gapPct: 46.6, cdr: 53.0, rdx: 52.5, budgetLab: 150.0, pop: 2376719, tier: "Phase 2 Expansion" },
+            { rank: 17, iso3: "NPL", country: "Nepal", region: "SEA", inc: 230.0, gapNum: 39748, gapPct: 58.5, cdr: 42.0, rdx: 40.8, budgetLab: 202.0, pop: 29475018, tier: "Phase 2 Expansion" },
+            { rank: 18, iso3: "PHL", country: "Philippines", region: "WPR", inc: 579.0, gapNum: 333436, gapPct: 50.9, cdr: 49.0, rdx: 65.3, budgetLab: 1856.0, pop: 113100949, tier: "Phase 2 Expansion" },
+            { rank: 19, iso3: "TLS", country: "Timor-Leste", region: "SEA", inc: 398.0, gapNum: 2207, gapPct: 40.9, cdr: 59.0, rdx: 32.1, budgetLab: 465.0, pop: 1350133, tier: "Phase 2 Expansion" },
+            { rank: 20, iso3: "BWA", country: "Botswana", region: "AFR", inc: 241.0, gapNum: 3450, gapPct: 59.5, cdr: 41.0, rdx: 56.4, budgetLab: 400.0, pop: 2401443, tier: "Phase 2 Expansion" }
         ];
 
-        function populateTable(data) {
+        let processedData = [];
+        let currentSortColumn = 'score';
+        let currentSortAsc = false;
+
+        // Weights
+        let wGap = 0.40;
+        let wInc = 0.30;
+        let wRdx = 0.20;
+        let wBud = 0.10;
+
+        function calculateScores() {
+            // Normalize min-max
+            const maxInc = Math.max(...rawCountryData.map(d => d.inc));
+            const maxBud = Math.max(...rawCountryData.map(d => d.budgetLab));
+
+            processedData = rawCountryData.map(item => {
+                const normGap = item.gapPct / 100;
+                const normInc = item.inc / maxInc;
+                const normInvRdx = 1 - (item.rdx / 100);
+                const normInvBud = 1 - (item.budgetLab / maxBud);
+
+                const rawScore = (normGap * wGap) + (normInc * wInc) + (normInvRdx * wRdx) + (normInvBud * wBud);
+                const totalW = wGap + wInc + wRdx + wBud || 1;
+                const score = rawScore / totalW;
+
+                return { ...item, score };
+            });
+
+            // Initial sort by score descending
+            processedData.sort((a, b) => b.score - a.score);
+            processedData.forEach((item, index) => item.rank = index + 1);
+        }
+
+        function updateWeights() {
+            const vGap = parseInt(document.getElementById('wGap').value);
+            const vInc = parseInt(document.getElementById('wInc').value);
+            const vRdx = parseInt(document.getElementById('wRdx').value);
+            const vBud = parseInt(document.getElementById('wBud').value);
+
+            document.getElementById('wGapVal').innerText = vGap + '%';
+            document.getElementById('wIncVal').innerText = vInc + '%';
+            document.getElementById('wRdxVal').innerText = vRdx + '%';
+            document.getElementById('wBudVal').innerText = vBud + '%';
+
+            wGap = vGap / 100;
+            wInc = vInc / 100;
+            wRdx = vRdx / 100;
+            wBud = vBud / 100;
+
+            calculateScores();
+            filterAndRender();
+        }
+
+        function resetWeights() {
+            document.getElementById('wGap').value = 40;
+            document.getElementById('wInc').value = 30;
+            document.getElementById('wRdx').value = 20;
+            document.getElementById('wBud').value = 10;
+            updateWeights();
+        }
+
+        function sortTable(column) {
+            if (currentSortColumn === column) {
+                currentSortAsc = !currentSortAsc;
+            } else {
+                currentSortColumn = column;
+                currentSortAsc = column === 'country' || column === 'iso3' || column === 'region';
+            }
+
+            // Update UI headers
+            document.querySelectorAll('th .sort-icon').forEach(icon => icon.innerText = '');
+            document.querySelectorAll('th').forEach(th => th.classList.remove('active-sort'));
+
+            const activeHeaderIcon = document.getElementById(`sort-${column}`);
+            if (activeHeaderIcon) {
+                activeHeaderIcon.innerText = currentSortAsc ? '▲' : '▼';
+                activeHeaderIcon.parentElement.classList.add('active-sort');
+            }
+
+            filterAndRender();
+        }
+
+        function filterAndRender() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const region = document.getElementById('regionFilter').value;
+            const tier = document.getElementById('tierFilter').value;
+
+            let filtered = processedData.filter(item => {
+                const matchesSearch = item.country.toLowerCase().includes(query) || item.iso3.toLowerCase().includes(query);
+                const matchesRegion = !region || item.region === region;
+                const matchesTier = !tier || item.tier === tier;
+                return matchesSearch && matchesRegion && matchesTier;
+            });
+
+            // Sort
+            filtered.sort((a, b) => {
+                let valA = a[currentSortColumn];
+                let valB = b[currentSortColumn];
+                if (typeof valA === 'string') {
+                    return currentSortAsc ? valA.localeCompare(valB) : valB.localeCompare(valA);
+                }
+                return currentSortAsc ? valA - valB : valB - valA;
+            });
+
+            renderTable(filtered);
+        }
+
+        function renderTable(data) {
             const tbody = document.getElementById('tableBody');
             tbody.innerHTML = '';
+
+            if (data.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; padding: 2rem; color: var(--text-muted);">No matching countries found.</td></tr>`;
+                return;
+            }
+
             data.forEach(row => {
                 const tr = document.createElement('tr');
-                const badgeClass = row.tier.includes('Tier 1') ? 'badge-high' : 'badge-med';
+                tr.className = 'clickable-row';
+                tr.onclick = () => openModal(row);
+
+                const badgeClass = row.tier.includes('Phase 1') ? 'badge-phase1' : 'badge-phase2';
                 tr.innerHTML = `
                     <td style="font-weight: 700;">#${row.rank}</td>
                     <td style="font-weight: 600; color: #38bdf8;">${row.iso3}</td>
@@ -650,28 +1042,69 @@
             });
         }
 
-        function filterTable() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            const region = document.getElementById('regionFilter').value;
-            const filtered = targetData.filter(item => {
-                const matchesSearch = item.country.toLowerCase().includes(query) || item.iso3.toLowerCase().includes(query);
-                const matchesRegion = !region || item.region === region;
-                return matchesSearch && matchesRegion;
-            });
-            populateTable(filtered);
+        function openModal(row) {
+            document.getElementById('modalCountryName').innerText = row.country;
+            document.getElementById('modalISO3').innerText = row.iso3;
+            document.getElementById('modalRegion').innerText = row.region;
+            document.getElementById('modalTier').innerText = row.tier;
+            document.getElementById('modalScore').innerText = row.score.toFixed(3);
+            document.getElementById('modalInc').innerText = row.inc.toLocaleString() + ' / 100k';
+            document.getElementById('modalGapNum').innerText = row.gapNum.toLocaleString();
+            document.getElementById('modalGapPct').innerText = row.gapPct + '%';
+            document.getElementById('modalCDR').innerText = row.cdr + '%';
+            document.getElementById('modalPop').innerText = (row.pop / 1000000).toFixed(1) + 'M';
+
+            let strategy = `Deploy LFA cassettes at primary healthcare centers for rapid high-throughput screening prior to molecular lab referral.`;
+            if (row.gapPct > 60) {
+                strategy = `Critical diagnostic gap region (>60% undetected). Priority target for community-wide LFA screening and Global Fund procurement grants.`;
+            } else if (row.rdx < 25) {
+                strategy = `Severe rapid-test coverage deficit (<25%). Ideal candidate to replace direct sputum smear microscopy with 15-minute Ag85B LFA strips.`;
+            }
+            document.getElementById('modalStrategyText').innerText = strategy;
+
+            document.getElementById('countryModal').classList.add('active');
         }
 
-        function switchTab(tabId) {
+        function closeModal(event) {
+            if (event.target.id === 'countryModal') {
+                document.getElementById('countryModal').classList.remove('active');
+            }
+        }
+
+        function closeModalDirect() {
+            document.getElementById('countryModal').classList.remove('active');
+        }
+
+        function exportCSV() {
+            const headers = ["Rank", "ISO3", "Country", "WHO_Region", "Incidence_per100k", "Missing_Cases", "Diagnostic_Gap_Pct", "Case_Detection_Rate_Pct", "Priority_Score", "Deployment_Phase"];
+            const rows = processedData.map(r => [
+                r.rank, r.iso3, `"${r.country}"`, r.region, r.inc, r.gapNum, r.gapPct, r.cdr, r.score.toFixed(4), `"${r.tier}"`
+            ]);
+
+            const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map(e => e.join(","))].join("\n");
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "TB_Diagnostic_Gap_Priority_Targets_IITMadras.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function switchTab(tabId, btnElement) {
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-            
-            event.target.classList.add('active');
+
+            if (btnElement) {
+                btnElement.classList.add('active');
+            }
             document.getElementById(tabId).classList.add('active');
         }
 
         // Initialize Charts & Data
         window.addEventListener('DOMContentLoaded', () => {
-            populateTable(targetData);
+            calculateScores();
+            filterAndRender();
 
             // SHAP Chart
             const shapCtx = document.getElementById('shapChart').getContext('2d');
