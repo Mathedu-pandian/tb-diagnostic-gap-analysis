@@ -26,7 +26,7 @@
 ## 🚨 Problem Statement: Why We Need This Work
 
 ### 1. The Global Undetected Crisis
-Tuberculosis (TB) remains one of the world's deadliest infectious killers, causing **1.3+ million deaths annually**. While over 10.6 million people develop active TB each year, **more than 3.0 million cases go completely undetected or unreported** to health authorities worldwide. 
+Tuberculosis (TB) remains one of the world's deadliest infectious killers, causing **1.3+ million deaths annually**. While over 10.6 million people develop active TB each year, **more than 2.3 million cases go completely undetected or unreported** to health authorities worldwide. 
 
 ### 2. The Human & Epidemiological Toll
 Every single untreated person with active TB infects **10 to 15 additional people** in their community each year. Missing 3 million cases annually sustains an ongoing cycle of transmission, drug resistance emergence, and preventable mortality—disproportionately impacting low- and middle-income countries (LMICs).
