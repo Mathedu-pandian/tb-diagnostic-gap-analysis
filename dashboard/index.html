@@ -10,6 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Chart.js for visualization -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- KaTeX for math typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
     <style>
         :root {
             --bg-dark: #070d1e;
@@ -724,7 +728,7 @@
                 <p>Deployment Model for Ag85B Polyclonal Antibody Lateral Flow Immunoassays (LFA)</p>
             </div>
             <div class="header-actions">
-                <a href="../STRATEGY_REPORT.md" class="btn btn-outline">📄 Strategy Report</a>
+                <button onclick="switchTab('prd-overview', document.querySelectorAll('.tab-btn')[3])" class="btn btn-outline">📄 Strategy Report</button>
                 <button onclick="exportCSV()" class="btn btn-success">📥 Export Filtered CSV</button>
                 <a href="https://github.com/Mathedu-pandian/tb-diagnostic-gap-analysis" target="_blank" class="btn btn-primary">🐙 GitHub Repo</a>
             </div>
@@ -928,7 +932,7 @@
                             <h2 style="font-size: 1.7rem; color: white; letter-spacing: -0.02em;">📊 Global TB Diagnostic Gap & Point-of-Care Strategy Report</h2>
                             <p style="color: var(--primary-light); font-weight: 600; margin-top: 0.25rem;">Lead Investigator: Mathana Vetrivel • Indian Institute of Technology Madras</p>
                         </div>
-                        <a href="../STRATEGY_REPORT.md" target="_blank" class="btn btn-outline" style="font-size: 0.85rem;">📄 Open STRATEGY_REPORT.md</a>
+                        <a href="https://github.com/Mathedu-pandian/tb-diagnostic-gap-analysis/blob/main/STRATEGY_REPORT.md" target="_blank" class="btn btn-outline" style="font-size: 0.85rem;">📄 Open Raw Markdown on GitHub</a>
                     </div>
 
                     <!-- Executive Summary Box -->
