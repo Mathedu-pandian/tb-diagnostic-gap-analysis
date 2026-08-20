@@ -1,8 +1,8 @@
 # ⚡ Global TB Diagnostic Gap & Point-of-Care Market Intelligence Platform
 
 > **Translating Laboratory Immunoassay Validation into a Global Product & Deployment Strategy**  
-> **Lead Investigator:** Mathedu Pandian (Maddy) | MS by Research, Biomedical Engineering, IIT Madras  
-> **Institution:** Department of Biomedical Engineering, Indian Institute of Technology Madras  
+> **Lead Investigator:** Mathana Vetrivel | MS by Research, IIT Madras  
+> **Institution:** Indian Institute of Technology Madras  
 > **GitHub:** [@Mathedu-pandian](https://github.com/Mathedu-pandian)  
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
@@ -117,8 +117,8 @@ jupyter notebook notebooks/TB_Diagnostic_Gap_Analysis.ipynb
 
 ## ✉️ Contact & Institutional Affiliation
 
-**Mathedu Pandian (Maddy)**  
-MS by Research Candidate in Biomedical Engineering  
+**Mathana Vetrivel**  
+MS by Research Candidate  
 Indian Institute of Technology Madras (IIT Madras)  
 GitHub: [https://github.com/Mathedu-pandian](https://github.com/Mathedu-pandian)  
 Email: `mathedu3002@gmail.com`

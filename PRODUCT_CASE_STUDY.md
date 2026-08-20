@@ -1,8 +1,8 @@
 # Global TB Diagnostic Gap & Point-of-Care Market Intelligence Strategy
 
-> **Project Document:**  Translational Diagnostic Product Strategy & Global Market Intelligence Report  
-> **Lead Investigator:** Mathana Vetrivel P| MS by Research, Biomedical Engineering, IIT Madras  
-> **Institutional Context:** Department of Biomedical Engineering, Indian Institute of Technology Madras  
+> **Project Document:** IIT Madras — Translational Diagnostic Product Strategy & Global Market Intelligence Report  
+> **Lead Investigator:** Mathana Vetrivel | MS by Research, IIT Madras  
+> **Institutional Context:** Indian Institute of Technology Madras  
 > **Live Interactive Dashboard:** [`dashboard/index.html`](file:///D:/tb%20dataset/dashboard/index.html)  
 
 ---
