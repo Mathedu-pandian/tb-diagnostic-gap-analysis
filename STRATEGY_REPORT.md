@@ -147,7 +147,7 @@ $$\text{Priority Score} = 0.40(\text{Diagnostic Gap \%}) + 0.30(\text{Incidence 
 
 1. **Explainable ML Rationale:** The team chose Random Forest + SHAP interpretability over deep neural networks to provide clear, actionable policy rules to health ministry officials.
 2. **Cross-Sectional Alignment (2021):** Evaluated panel coverage (2000–2024) and selected **2021** as the baseline scoring year due to optimal data completeness across all four WHO datasets.
-3. **Economic Target Alignment:** Aligned benchtop assay analytical sensitivity ($0.6\text{ ng/mL}$) with a rigid manufacturing cost target of **$<\$1.50\text{ per test}$** to thrive in high donor-dependency ($>75\%$) markets.
+3. **Economic Target Alignment:** Aligned benchtop assay analytical sensitivity ($0.6\text{ ng/mL}$) with a rigid manufacturing cost target of **$1.50 { per test}$** to thrive in high donor-dependency ($>75\%$) markets.
 
 ---
 
