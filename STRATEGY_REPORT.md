@@ -9,7 +9,7 @@
 
 > [!IMPORTANT]
 > **Executive Summary & Mission Objective**  
-> Every year, over **3.0 million active Tuberculosis (TB) cases** estimated by the World Health Organization (WHO) remain undetected by health systems globally. This report bridges **benchtop bio-engineering** (a gold nanoparticle-based polyclonal antibody lateral flow immunoassay for the Ag85B antigen; $\text{LOD} = 0.6\text{ ng/mL}$, $R^2 = 0.972$ developed at **IIT Madras**) with **global epidemiological data science** to construct an evidence-based deployment strategy targeting high-impact health systems.
+> Every year, over **3.0 million active Tuberculosis (TB) cases** estimated by the World Health Organization (WHO) remain undetected by health systems globally. This report bridges **benchtop bio-engineering** (a gold nanoparticle-based polyclonal antibody lateral flow immunoassay for the Ag85B antigen; LOD = 0.6 ng/mL, R² = 0.972 developed at **IIT Madras**) with **global epidemiological data science** to construct an evidence-based deployment strategy targeting high-impact health systems.
 
 ---
 
@@ -43,11 +43,11 @@ graph TD
 
 > [!WARNING]
 > **The Centralized Lab Bottleneck**  
-> Conventional TB diagnostics rely on centralized sputum smear microscopy (low sensitivity: ~50%) or expensive automated PCR systems like GeneXpert ($\$10\text{--}\$30$ per cartridge, requiring continuous electricity, temperature control, and specialized lab technicians). In low-resource settings, patient loss-to-follow-up occurs before lab results return.
+> Conventional TB diagnostics rely on centralized sputum smear microscopy (low sensitivity: ~50%) or expensive automated PCR systems like GeneXpert ($10–$30 per cartridge, requiring continuous electricity, temperature control, and specialized lab technicians). In low-resource settings, patient loss-to-follow-up occurs before lab results return.
 
 > [!TIP]
 > **Point-of-Care (POC) Value Proposition**  
-> Our team's cassette-based Lateral Flow Immunoassay (LFA) operates **equipment-free**, yields readable visual results in **$<15\text{ minutes}$**, and targets a unit manufacturing cost of **$<\$1.50\text{ per test}$**, making community-wide triage fiscally viable for donor-dependent health systems.
+> Our team's cassette-based Lateral Flow Immunoassay (LFA) operates **equipment-free**, yields readable visual results in **<15 minutes**, and targets a unit manufacturing cost of **<$1.50 per test**, making community-wide triage fiscally viable for donor-dependent health systems.
 
 ---
 
@@ -66,8 +66,8 @@ graph TD
 To model the drivers behind global case detection gaps, our team trained a **Random Forest Regressor** on a pooled 2015–2022 country-year panel using **country-held-out out-of-fold validation**.
 
 ### Model Performance Metrics
-- **Out-of-Fold $R^2$ Score:** `0.50` on unseen country health systems.
-- **Mean Absolute Error (MAE):** $\approx 8.9$ percentage points.
+- **Out-of-Fold R² Score:** `0.50` on unseen country health systems.
+- **Mean Absolute Error (MAE):** ≈ 8.9 percentage points.
 
 ```mermaid
 gantt
@@ -89,7 +89,7 @@ gantt
 
 ## 5. Health System Archetypes (K-Means Clustering)
 
-Countries were segmented into $K=4$ health system archetypes to guide tailored diagnostic commercialization:
+Countries were segmented into K=4 health system archetypes to guide tailored diagnostic commercialization:
 
 ```mermaid
 pie title Global Health System Archetypes
@@ -103,11 +103,11 @@ pie title Global Health System Archetypes
 
 1. **Cluster 1 — High Budget, High Diagnostic Gap (9 Key Target Countries):**
    - *Representative Nations:* Papua New Guinea, Philippines, Angola, Myanmar, DR Congo.
-   - *Characteristics:* High mean incidence ($472/100\text{k}$), $\approx 50\%$ diagnostic gap despite high total lab budgets.
+   - *Characteristics:* High mean incidence (472/100k), ≈ 50% diagnostic gap despite high total lab budgets.
    - *Strategy:* Deploy LFA cassettes as **primary triage tools** to relieve centralized laboratory congestion.
 
 2. **Cluster 2 — Severely Under-Resourced Systems (42 Countries):**
-   - *Characteristics:* Extremely low lab budget per capita ($<\$1.00/100\text{k}$), heavy donor dependency ($>80\%$).
+   - *Characteristics:* Extremely low lab budget per capita (<$1.00/100k), heavy donor dependency (>80%).
    - *Strategy:* Focus on Global Fund grant-subsidized bulk procurement and mobile outreach units.
 
 ---
@@ -147,7 +147,7 @@ $$\text{Priority Score} = 0.40(\text{Diagnostic Gap \%}) + 0.30(\text{Incidence 
 
 1. **Explainable ML Rationale:** The team chose Random Forest + SHAP interpretability over deep neural networks to provide clear, actionable policy rules to health ministry officials.
 2. **Cross-Sectional Alignment (2021):** Evaluated panel coverage (2000–2024) and selected **2021** as the baseline scoring year due to optimal data completeness across all four WHO datasets.
-3. **Economic Target Alignment:** Aligned benchtop assay analytical sensitivity ($0.6\text{ ng/mL}$) with a rigid manufacturing cost target of **$\$1.50\text{ per test}$** to thrive in high donor-dependency ($>75\%$) markets.
+3. **Economic Target Alignment:** Aligned benchtop assay analytical sensitivity (0.6 ng/mL) with a rigid manufacturing cost target of **$1.50 per test** to thrive in high donor-dependency (>75%) markets.
 4. **International Patent & IP Rights Expansion:** Beyond initial priority filings at the Indian Patent Office (IPO, Chennai), established a WIPO PCT international patent expansion strategy targeting regional IP offices (ARIPO, OAPI, and ASEAN national phase entry) to guarantee commercial freedom-to-operate and protect Product-Market Fit (PMF) across Phase 1/Phase 2 target markets.
 
 ---

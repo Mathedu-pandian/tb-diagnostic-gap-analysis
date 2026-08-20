@@ -14,10 +14,10 @@
 ## 1. Product Overview & Objectives
 
 ### 1.1 Background & Problem Definition
-An estimated **3.0+ million active Tuberculosis (TB) cases** are missed annually by health systems worldwide. Conventional diagnostics rely on centralized sputum smear microscopy (low sensitivity ~50%) or expensive molecular PCR platforms (GeneXpert at $\$10\text{--}\$30/\text{test}$, requiring uninterrupted electricity, air conditioning, and trained lab technicians). In low- and middle-income countries (LMICs), long travel distances and multi-day lab turnaround lead to high patient loss-to-follow-up before treatment initiation.
+An estimated **3.0+ million active Tuberculosis (TB) cases** are missed annually by health systems worldwide. Conventional diagnostics rely on centralized sputum smear microscopy (low sensitivity ~50%) or expensive molecular PCR platforms (GeneXpert at $10–$30/test, requiring uninterrupted electricity, air conditioning, and trained lab technicians). In low- and middle-income countries (LMICs), long travel distances and multi-day lab turnaround lead to high patient loss-to-follow-up before treatment initiation.
 
 ### 1.2 Product Solution
-1. **Physical Product (Ag85B LFA Cassette):** An equipment-free, point-of-care rapid diagnostic test strip utilizing gold nanoparticle-conjugated polyclonal antibodies targeting the secreted **Ag85B antigen** in human samples. Delivers visual readouts in **$<15\text{ minutes}$** at a production cost target of **$<\$1.50\text{ per test}$**.
+1. **Physical Product (Ag85B LFA Cassette):** An equipment-free, point-of-care rapid diagnostic test strip utilizing gold nanoparticle-conjugated polyclonal antibodies targeting the secreted **Ag85B antigen** in human samples. Delivers visual readouts in **<15 minutes** at a production cost target of **<$1.50 per test**.
 2. **Software Product (Diagnostic Intelligence Platform):** A client-side machine learning and prioritization system built on 24 years of WHO Global TB Programme open data (2000–2024 across 200+ countries) to identify high-impact deployment markets.
 
 ### 1.3 Intellectual Property (IP) & International Patent Rights Expansion Strategy
@@ -85,18 +85,18 @@ graph LR
 
 | ID | Parameter | Requirement Specification | Validation Method |
 | :--- | :--- | :--- | :--- |
-| **NFR-01** | **Unit Cost Ceiling** | $<\$1.50$ per cassette at scale ($>1\text{M}$ units/year). | Bill of Materials (BOM) & scale manufacturing model. |
-| **NFR-02** | **Clinical Sensitivity** | $\ge 85\%$ vs. sputum culture gold standard in active TB. | Multi-site clinical field evaluation trials. |
-| **NFR-03** | **Clinical Specificity** | $\ge 95\%$ vs. non-TB symptomatic controls. | Clinical specificity trial panel ($N \ge 500$). |
-| **NFR-04** | **Shelf Life** | 18 to 24 months stored at $4^\circ\text{C}$ to $40^\circ\text{C}$. | Accelerated thermal stability testing ($45^\circ\text{C}/75\%\text{ RH}$). |
-| **NFR-05** | **Humidity Tolerance** | Fully functional up to $90\%$ relative humidity (sealed pouch). | Environmental chamber testing. |
+| **NFR-01** | **Unit Cost Ceiling** | <$1.50 per cassette at scale (>1M units/year). | Bill of Materials (BOM) & scale manufacturing model. |
+| **NFR-02** | **Clinical Sensitivity** | ≥ 85% vs. sputum culture gold standard in active TB. | Multi-site clinical field evaluation trials. |
+| **NFR-03** | **Clinical Specificity** | ≥ 95% vs. non-TB symptomatic controls. | Clinical specificity trial panel (N ≥ 500). |
+| **NFR-04** | **Shelf Life** | 18 to 24 months stored at 4°C to 40°C. | Accelerated thermal stability testing (45°C/75% RH). |
+| **NFR-05** | **Humidity Tolerance** | Fully functional up to 90% relative humidity (sealed pouch). | Environmental chamber testing. |
 
 ### 4.2 Software System Performance & Usability
 
-- **NFR-SW-01 (Load Time):** Web dashboard MUST render initial UI in $<300\text{ ms}$ on standard web browsers.
+- **NFR-SW-01 (Load Time):** Web dashboard MUST render initial UI in <300 ms on standard web browsers.
 - **NFR-SW-02 (Client-Side Independence):** Web app MUST operate fully client-side (HTML5/CSS3/ES6 JS) with zero mandatory backend server dependencies.
-- **NFR-SW-03 (Responsiveness):** UI MUST automatically adapt layout across desktop ($>1200\text{px}$), tablet ($768\text{px}\text{--}1199\text{px}$), and mobile ($<767\text{px}$) viewports.
-- **NFR-SW-04 (Accessibility):** Dark mode theme MUST maintain contrast ratio $\ge 4.5:1$ (WCAG AA compliant).
+- **NFR-SW-03 (Responsiveness):** UI MUST automatically adapt layout across desktop (>1200px), tablet (768px–1199px), and mobile (<767px) viewports.
+- **NFR-SW-04 (Accessibility):** Dark mode theme MUST maintain contrast ratio ≥ 4.5:1 (WCAG AA compliant).
 
 ---
 
@@ -148,9 +148,9 @@ graph TD
 | **Data Layer** | `TB_notifications.csv` | WHO Notification Panel | Case notification totals (`c_newinc`) & rapid test % (`rdx_coverage`). |
 | **Data Layer** | `TB_budget.csv` | WHO Financial Panel | Lab budget allocation per 100k population (`budget_lab_per100k`). |
 | **Analytics Layer** | Feature Engineering | Raw WHO CSV metrics | Diagnostic Gap % (`(inc - notif)/inc * 100`) & Lab Budget share. |
-| **Analytics Layer** | Random Forest Regressor | Pooled 2015–2022 panel data | Out-of-fold case detection predictions ($R^2 = 0.50$, $\text{MAE} \approx 8.9\%$). |
+| **Analytics Layer** | Random Forest Regressor | Pooled 2015–2022 panel data | Out-of-fold case detection predictions (R² = 0.50, MAE ≈ 8.9%). |
 | **Analytics Layer** | SHAP Interpretability | TreeSHAP Explainer | SHAP feature ranking metrics (Lab Budget = 14.2, RDx = 11.8). |
-| **Analytics Layer** | K-Means Clustering | Standardized health features | 4 distinct country archetypes ($K=4$). |
+| **Analytics Layer** | K-Means Clustering | Standardized health features | 4 distinct country archetypes (K=4). |
 | **Presentation Layer**| Interactive Web App | Client-side JS (`dashboard/index.html`) | Real-time weight sliders, table sorting, country drawer modal. |
 
 ---
@@ -158,13 +158,13 @@ graph TD
 ## 6. Acceptance Criteria & Definition of Done (DoD)
 
 ### 6.1 Hardware / Immunoassay DoD
-- [x] Analytical LOD verified at $\le 0.6\text{ ng/mL}$ with $R^2 \ge 0.95$ using Ag85B recombinant antigen standards.
+- [x] Analytical LOD verified at ≤ 0.6 ng/mL with R² ≥ 0.95 using Ag85B recombinant antigen standards.
 - [x] Cross-reactivity tested against common non-tuberculous mycobacteria (NTM) species with zero false-positive band formation.
 - [x] Test cassette housing designed for 1-step sample application without secondary buffer tubes.
 
 ### 6.2 Software & Dashboard DoD
 - [x] Merged dataset verified across 200+ countries and 24 panel years (2000–2024).
-- [x] Random Forest model achieving out-of-fold $R^2 = 0.50$ and $\text{MAE} \approx 8.9\%$ on unseen country health systems.
+- [x] Random Forest model achieving out-of-fold R² = 0.50 and MAE ≈ 8.9% on unseen country health systems.
 - [x] Web dashboard equipped with real-time weight sliders, country profile modals, column sorting, and CSV exporter.
 - [x] Repository published to GitHub with live deployment enabled on GitHub Pages.
 
@@ -176,13 +176,14 @@ graph TD
 | :--- | :--- | :---: | :---: | :--- |
 | **R-01** | High missingness in WHO budget & RDx reporting in specific low-income countries. | Medium | High | Use pooled panel years (2015–2022) and cross-sectional median imputation with sensitivity analysis. |
 | **R-02** | Cross-reactivity with non-tuberculous mycobacteria (NTM) causing false positives. | High | Low | Epitope mapping and polyclonal antibody affinity purification against Ag85B-specific peptide fragments. |
-| **R-03** | Supply chain price spikes in gold nanoparticle conjugate materials exceeding $<\$1.50$ target. | Medium | Medium | Establish multi-source chemical precursor suppliers and optimize gold nanoparticle loading density per strip. |
+| **R-03** | Supply chain price spikes in gold nanoparticle conjugate materials exceeding <$1.50 target. | Medium | Medium | Establish multi-source chemical precursor suppliers and optimize gold nanoparticle loading density per strip. |
 | **R-04** | Delays in WHO Prequalification (PQ) regulatory approval timeline. | High | Medium | Initiate early WHO PQ pre-submission consultations and align clinical trial protocols with ISO 13485 standards. |
+| **R-05** | Lack of patent coverage in international target deployment markets. | High | Medium | File WIPO PCT application within 12-month priority window; enter ARIPO/OAPI regional phase and ASEAN national phase. |
 
 ---
 
 ## 8. Success Metrics & Key Performance Indicators (OKRs)
 
-- **Objective 1 (Diagnostic Reach):** Deploy LFA cassettes to Phase 1 target countries (e.g. Papua New Guinea, Myanmar, Philippines) covering $>65\%$ of undetected cases in Cluster 1 regions.
-- **Objective 2 (Diagnostic Yield):** Increase baseline case detection rate in target pilot districts by **$+25\%$** within 18 months of guidelines integration.
-- **Objective 3 (Economic Efficiency):** Achieve a **$50\%\text{--}60\%$ reduction** in diagnostic health system cost per case detected compared to centralized PCR molecular platforms.
+- **Objective 1 (Diagnostic Reach):** Deploy LFA cassettes to Phase 1 target countries (e.g. Papua New Guinea, Myanmar, Philippines) covering >65% of undetected cases in Cluster 1 regions.
+- **Objective 2 (Diagnostic Yield):** Increase baseline case detection rate in target pilot districts by **+25%** within 18 months of guidelines integration.
+- **Objective 3 (Economic Efficiency):** Achieve a **50%–60% reduction** in diagnostic health system cost per case detected compared to centralized PCR molecular platforms.

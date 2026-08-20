@@ -11,7 +11,7 @@
 
 Over **3 million active tuberculosis (TB) cases** estimated by the World Health Organization (WHO) go undetected or unreported every year. This massive "missing cases" gap is primarily concentrated in low- and middle-income countries (LMICs) with limited laboratory infrastructure and centralized diagnostic bottlenecks.
 
-This project bridges **benchtop bio-engineering** (developing a gold nanoparticle-based polyclonal antibody lateral flow immunoassay for the Ag85B antigen; $LOD = 0.6\text{ ng/mL}$, $R^2 = 0.972$ at IIT Madras) with **global market intelligence**. By aggregating 24 years of WHO open data (2000–2024 across 200+ countries), I built an end-to-end Machine Learning and prioritization pipeline to identify top target countries where low-cost, point-of-care (POC) rapid diagnostic test strips deliver maximum epidemiological impact and product market fit.
+This project bridges **benchtop bio-engineering** (developing a gold nanoparticle-based polyclonal antibody lateral flow immunoassay for the Ag85B antigen; LOD = 0.6 ng/mL, R² = 0.972 at IIT Madras) with **global market intelligence**. By aggregating 24 years of WHO open data (2000–2024 across 200+ countries), I built an end-to-end Machine Learning and prioritization pipeline to identify top target countries where low-cost, point-of-care (POC) rapid diagnostic test strips deliver maximum epidemiological impact and product market fit.
 
 ---
 
@@ -27,9 +27,9 @@ graph TD
 ```
 
 ### Problem Statement & Health System Friction
-- **Centralized Lab Bottlenecks:** Existing molecular diagnostics (e.g. GeneXpert) cost \$10–\$30 per test and require electricity, trained technicians, and air-conditioned lab environments.
+- **Centralized Lab Bottlenecks:** Existing molecular diagnostics (e.g. GeneXpert) cost $10–$30 per test and require electricity, trained technicians, and air-conditioned lab environments.
 - **The Diagnostic Gap:** In LMICs, up to **50–80% of estimated active cases** are never diagnosed due to long travel distances, high out-of-pocket costs, and lab backlogs.
-- **Market Opportunity:** Equipment-free, cassette-based Lateral Flow Immunoassays (LFA) priced at **<\$1.50 per test** enable non-specialized health workers in primary healthcare clinics to diagnose active TB within 15 minutes.
+- **Market Opportunity:** Equipment-free, cassette-based Lateral Flow Immunoassays (LFA) priced at **<$1.50 per test** enable non-specialized health workers in primary healthcare clinics to diagnose active TB within 15 minutes.
 
 ---
 
@@ -53,7 +53,7 @@ graph TD
 
 ### Machine Learning Model & Feature Importance
 - **Architecture:** Random Forest Regressor trained on pooled 2015–2022 country-year panel using **country-held-out out-of-fold validation**.
-- **Model Performance:** $R^2 = 0.50$, Mean Absolute Error (MAE) $\approx 8.9\%$ on unseen country health systems.
+- **Model Performance:** R² = 0.50, Mean Absolute Error (MAE) ≈ 8.9% on unseen country health systems.
 - **SHAP Interpretability:**
   1. `budget_lab_per100k`: Strongest positive driver of case detection rate.
   2. `rdx_coverage_pct`: Non-linear threshold effect—case detection drops exponentially when rapid test access is below 30%.
@@ -63,7 +63,7 @@ graph TD
 
 ## 4. Health System Archetypes (K-Means Clustering)
 
-Countries were clustered ($K=4$) into health system archetypes to guide tailored diagnostic deployment:
+Countries were clustered (K=4) into health system archetypes to guide tailored diagnostic deployment:
 
 ```mermaid
 pie title Country Health System Archetypes
@@ -115,7 +115,7 @@ $$\text{Priority Score} = 0.40(\text{Diagnostic Gap \%}) + 0.30(\text{Incidence 
 - **Team Rationale:** WHO treatment outcome data lags by 12–18 months, and budget reporting cycles vary across national ministries. Analyzing the 2000–2024 panel revealed that **2021** offered the highest data completeness across all four datasets (burden, notifications, outcomes, and budgets) while reflecting post-pandemic health system conditions.
 
 ### Decision 3: Aligning Bench-Top LOD Validation with Target Pricing
-- **Team Rationale:** Our laboratory team validated an analytical Limit of Detection (LOD) of $0.6\text{ ng/mL}$ ($R^2 = 0.972$) for the Ag85B antigen. However, data analysis showed that in countries with high donor dependency (>75%), diagnostic adoption hinges strictly on unit cost. The team established a target production cost threshold of **<\$1.50 per test cassette** to ensure fiscal viability.
+- **Team Rationale:** Our laboratory team validated an analytical Limit of Detection (LOD) of 0.6 ng/mL (R² = 0.972) for the Ag85B antigen. However, data analysis showed that in countries with high donor dependency (>75%), diagnostic adoption hinges strictly on unit cost. The team established a target production cost threshold of **<$1.50 per test cassette** to ensure fiscal viability.
 
 ### Decision 4: Phased Target Market Selection
 - **Team Rationale:** Rather than distributing tests uniformly, the team prioritized the 9 countries in Cluster 1 (High Burden, High Gap despite high lab budget) for initial pilot trials. In these countries, existing lab infrastructure is overwhelmed, making rapid POC triage strips immediately impactful.

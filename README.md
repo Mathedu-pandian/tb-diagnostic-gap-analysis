@@ -27,8 +27,8 @@
 Over **3 million active tuberculosis (TB) cases** estimated by the World Health Organization (WHO) go undetected or unreported each year. This diagnostic gap is largest in low- and middle-income countries (LMICs) with limited laboratory infrastructure, high donor dependency, and centralized lab bottlenecks.
 
 This project bridges **benchtop bio-engineering** with **global product strategy**:
-1. **Benchtop Bio-Engineering Context:** Developing a polyclonal antibody-based gold nanoparticle lateral flow immunoassay (LFA) for TB diagnostics targeting the **Ag85B antigen** ($\text{LOD} = 0.6\text{ ng/mL}$, $R^2 = 0.972$) at IIT Madras.
-2. **Translational Market Strategy:** Combining 24 years of WHO open data (2000–2024 across 200+ countries) to identify *where* equipment-free, low-cost ($<\$1.50$) rapid diagnostic strips will achieve the highest epidemiological impact and health system adoption.
+1. **Benchtop Bio-Engineering Context:** Developing a polyclonal antibody-based gold nanoparticle lateral flow immunoassay (LFA) for TB diagnostics targeting the **Ag85B antigen** (LOD = 0.6 ng/mL, R² = 0.972) at IIT Madras.
+2. **Translational Market Strategy:** Combining 24 years of WHO open data (2000–2024 across 200+ countries) to identify *where* equipment-free, low-cost (<$1.50) rapid diagnostic strips will achieve the highest epidemiological impact and health system adoption.
 
 ```mermaid
 graph LR
