@@ -14,7 +14,7 @@
 ## 1. Product Overview & Objectives
 
 ### 1.1 Background & Problem Definition
-An estimated **3.0+ million active Tuberculosis (TB) cases** are missed annually by health systems worldwide. Conventional diagnostics rely on centralized sputum smear microscopy (low sensitivity ~50%) or expensive molecular PCR platforms (GeneXpert at $10–$30/test, requiring uninterrupted electricity, air conditioning, and trained lab technicians). In low- and middle-income countries (LMICs), long travel distances and multi-day lab turnaround lead to high patient loss-to-follow-up before treatment initiation.
+An estimated **2.3+ million active Tuberculosis (TB) cases** are missed annually by health systems worldwide. Conventional diagnostics rely on centralized sputum smear microscopy (low sensitivity ~50%) or expensive molecular PCR platforms (GeneXpert at $10–$30/test, requiring uninterrupted electricity, air conditioning, and trained lab technicians). In low- and middle-income countries (LMICs), long travel distances and multi-day lab turnaround lead to high patient loss-to-follow-up before treatment initiation.
 
 ### 1.2 Product Solution
 1. **Physical Product (Ag85B LFA Cassette):** An equipment-free, point-of-care rapid diagnostic test strip utilizing gold nanoparticle-conjugated polyclonal antibodies targeting the secreted **Ag85B antigen** in human samples. Delivers visual readouts in **<15 minutes** at a production cost target of **<$1.50 per test**.
