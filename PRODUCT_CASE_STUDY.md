@@ -43,13 +43,19 @@ graph TD
 
 ---
 
-## 3. Data Architecture & Machine Learning Pipeline
-
-### Datasets Integrated
+### Data Architecture & Ingestion
+The model ingests 4 primary WHO Global TB Programme open datasets covering all **215 countries and territories** over a 24-year panel (2000–2024):
 1. **TB Burden Estimates:** Country-level incidence, mortality, and HIV-TB co-infection rates.
 2. **Case Notifications:** Actual notified cases and rapid diagnostic test (RDx) usage.
 3. **Treatment Outcomes:** Success rates across new and relapse cohorts.
 4. **National TB Budgets:** Laboratory funding per capita, total budget share, and domestic vs. donor funding breakdown.
+
+### Data Selection & Country Filtration Methodology
+- **Why Evaluate All 215 Countries?** The raw pipeline ingests every single country monitored by the WHO. No country was pre-filtered or discarded prior to model scoring.
+- **Why Target Top Priority Countries (Top 10 / Top 20)?**
+  - High-income nations (e.g. US, UK, Japan) already achieve high case detection (>85%–90%) and full molecular PCR coverage. Deploying point-of-care rapid test strips in low-burden systems yields minimal epidemiological ROI.
+  - Ranking isolates Tier 1 markets (e.g. Papua New Guinea, Myanmar, Philippines) where diagnostic gaps are largest (40%–80%) and rapid test access is minimal—enabling health ministries and donors (Global Fund, USAID) to focus resources where lives saved per dollar are maximized.
+- **Why Select 2021 as the Baseline Scoring Year?** Evaluating the 2000–2024 panel revealed that **2021** provided the highest multi-dataset completeness across all 4 WHO files following post-pandemic reporting lags.
 
 ### Machine Learning Model & Feature Importance
 - **Architecture:** Random Forest Regressor trained on pooled 2015–2022 country-year panel using **country-held-out out-of-fold validation**.

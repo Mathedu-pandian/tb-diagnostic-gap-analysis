@@ -77,6 +77,21 @@ graph LR
 - **FR-SW-05 (Dynamic Weight Simulator):** User MUST be able to adjust weights $w_1, w_2, w_3, w_4$ via real-time sliders and re-rank the country priority table instantly.
 - **FR-SW-06 (Data Exporter):** Software MUST support one-click export of filtered and scored target datasets to `.csv` format.
 
+### 3.3 Data Selection Methodology & Country Filtration Rationale
+
+#### 1. Dataset Coverage (All 215 WHO Countries)
+The software model ingests the complete WHO global panel covering all **215 countries and territories**. No country was pre-excluded from the raw data processing pipeline; the scoring model evaluates every health system worldwide.
+
+#### 2. Rationale for Targeted Priority Ranking (Top 10 / Top 20 Countries)
+- **Donor Resource Allocation:** International grant funders (Global Fund, USAID) and health ministries cannot launch clinical trials and supply chains across 215 countries simultaneously.
+- **Filtering Out High-Performing Systems:** High-income nations (e.g. US, UK, Germany, Japan) already achieve high case detection rates (>85%–90%) and ubiquitous molecular PCR coverage. Deploying POC rapid strips in low-burden systems yields minimal epidemiological ROI.
+- **Focusing on High-Friction Markets:** The priority algorithm isolates Tier 1 countries (e.g. Papua New Guinea, Myanmar, Philippines) where diagnostic gaps are severe (40%–80%) and rapid test access is minimal—maximizing lives saved per dollar invested.
+
+#### 3. How Data Was Chosen (WHO Panel Integration & Baseline Year)
+- **WHO Data Integration:** Ingested and merged 4 primary WHO Global TB Programme CSV files spanning 2000–2024 (Burden, Notifications, Outcomes, Budgets).
+- **Baseline Cross-Section (2021 Selection):** Selected **2021** as the baseline evaluation year due to optimal multi-dataset reporting completeness across all 4 WHO files following post-pandemic reporting lags.
+- **Feature Normalization:** Normalized 4 key indicators (Diagnostic Gap %, Incidence/100k, Inverse RDx Access, Inverse Lab Budget Share) on a 0.0 to 1.0 min-max scale across the 2021 cross-section to calculate composite priority scores.
+
 ---
 
 ## 4. Non-Functional Requirements (NFRs)
