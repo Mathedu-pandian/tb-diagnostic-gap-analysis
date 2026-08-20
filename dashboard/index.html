@@ -728,7 +728,7 @@
                 <p>Deployment Model for Ag85B Polyclonal Antibody Lateral Flow Immunoassays (LFA)</p>
             </div>
             <div class="header-actions">
-                <button onclick="switchTab('prd-overview', document.querySelectorAll('.tab-btn')[3])" class="btn btn-outline">📄 Strategy Report</button>
+                <a href="https://github.com/Mathedu-pandian/tb-diagnostic-gap-analysis/blob/main/STRATEGY_REPORT.md" target="_blank" class="btn btn-outline">📄 Strategy Report (GitHub)</a>
                 <button onclick="exportCSV()" class="btn btn-success">📥 Export Filtered CSV</button>
                 <a href="https://github.com/Mathedu-pandian/tb-diagnostic-gap-analysis" target="_blank" class="btn btn-primary">🐙 GitHub Repo</a>
             </div>
@@ -767,7 +767,6 @@
             <button class="tab-btn active" onclick="switchTab('target-matrix', this)">🎯 Priority Target Matrix</button>
             <button class="tab-btn" onclick="switchTab('ml-insights', this)">🧠 ML & SHAP Drivers</button>
             <button class="tab-btn" onclick="switchTab('archetypes', this)">🧩 Country Archetypes</button>
-            <button class="tab-btn" onclick="switchTab('prd-overview', this)">📊 Strategy Report</button>
         </div>
 
         <!-- Tab 1: Priority Target Matrix -->
@@ -922,187 +921,7 @@
             </div>
         </div>
 
-        <!-- Tab 4: Strategy Report -->
-        <div id="prd-overview" class="tab-content">
-            <div class="section-card">
-                <div class="prd-section">
-                    <!-- Report Header -->
-                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1.25rem; margin-bottom: 1.75rem; flex-wrap: wrap; gap: 1rem;">
-                        <div>
-                            <h2 style="font-size: 1.7rem; color: white; letter-spacing: -0.02em;">📊 Global TB Diagnostic Gap & Point-of-Care Strategy Report</h2>
-                            <p style="color: var(--primary-light); font-weight: 600; margin-top: 0.25rem;">Lead Investigator: Mathana Vetrivel • Indian Institute of Technology Madras</p>
-                        </div>
-                        <a href="https://github.com/Mathedu-pandian/tb-diagnostic-gap-analysis/blob/main/STRATEGY_REPORT.md" target="_blank" class="btn btn-outline" style="font-size: 0.85rem;">📄 Open Raw Markdown on GitHub</a>
-                    </div>
 
-                    <!-- Executive Summary Box -->
-                    <div style="background: rgba(59, 130, 246, 0.12); border-left: 4px solid var(--primary-light); padding: 1.4rem; border-radius: 12px; margin-bottom: 2rem;">
-                        <h4 style="color: white; font-size: 1.05rem; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.4rem;">🎯 Mission Objective & Executive Summary</h4>
-                        <p style="font-size: 0.95rem; color: #cbd5e1; margin: 0; line-height: 1.7;">Every year, over <strong>3.0 million active Tuberculosis (TB) cases</strong> estimated by the WHO remain undetected globally. This report bridges <strong>benchtop bio-engineering</strong> (gold nanoparticle polyclonal antibody LFA for the Ag85B antigen; LOD = 0.6 ng/mL, R² = 0.972 at IIT Madras) with <strong>global epidemiological data science</strong> to establish an evidence-based deployment strategy targeting high-friction health systems.</p>
-                    </div>
-
-                    <!-- Section 1 -->
-                    <h3>1. Translational Value Chain</h3>
-                    <div class="sliders-grid" style="margin: 1.25rem 0 2rem 0;">
-                        <div style="background: rgba(26, 38, 66, 0.7); border: 1px solid rgba(59, 130, 246, 0.3); padding: 1.25rem; border-radius: 12px;">
-                            <div style="color: var(--accent-cyan); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;">PHASE 1: R&D & ASSAY</div>
-                            <h4 style="color: white; font-size: 1rem; margin-bottom: 0.5rem;">Ag85B LFA Assay</h4>
-                            <p style="font-size: 0.85rem; color: #cbd5e1; margin: 0;">Polyclonal antibody gold nanoparticle cassette with LOD of 0.6 ng/mL (R² = 0.972).</p>
-                        </div>
-                        <div style="background: rgba(26, 38, 66, 0.7); border: 1px solid rgba(168, 85, 247, 0.3); padding: 1.25rem; border-radius: 12px;">
-                            <div style="color: var(--accent-purple); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;">PHASE 2: MARKET DATA</div>
-                            <h4 style="color: white; font-size: 1rem; margin-bottom: 0.5rem;">Random Forest & SHAP</h4>
-                            <p style="font-size: 0.85rem; color: #cbd5e1; margin: 0;">24-year WHO panel ingestion (2000–2024), feature engineering, and out-of-fold ML modeling (R² = 0.50).</p>
-                        </div>
-                        <div style="background: rgba(26, 38, 66, 0.7); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1.25rem; border-radius: 12px;">
-                            <div style="color: var(--accent-green); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;">PHASE 3: TARGET DEPLOYMENT</div>
-                            <h4 style="color: white; font-size: 1rem; margin-bottom: 0.5rem;">Archetypes & Scoring</h4>
-                            <p style="font-size: 0.85rem; color: #cbd5e1; margin: 0;">K-Means clustering (K=4), composite priority index, and Phase 1 target market rollout.</p>
-                        </div>
-                    </div>
-
-                    <!-- Section 2 -->
-                    <h3>2. Economic Market Fit & Diagnostic Bottlenecks</h3>
-                    <div class="two-col-grid" style="margin: 1.25rem 0 2rem 0;">
-                        <div style="background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.3); padding: 1.4rem; border-radius: 14px;">
-                            <h4 style="color: #fb7185; margin-bottom: 0.5rem; font-size: 1.05rem;">⚠️ Centralized Lab Bottlenecks</h4>
-                            <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0; line-height: 1.6;">Conventional diagnostics rely on sputum microscopy (low sensitivity ~50%) or molecular GeneXpert PCR ($10–$30/test, continuous power requirement, specialized operators). In LMICs, patient loss-to-follow-up occurs before lab results return.</p>
-                        </div>
-                        <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1.4rem; border-radius: 14px;">
-                            <h4 style="color: #34d399; margin-bottom: 0.5rem; font-size: 1.05rem;">💡 Point-of-Care (POC) Value Proposition</h4>
-                            <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0; line-height: 1.6;">Our cassette LFA operates <strong>equipment-free</strong>, delivers visual diagnostic readouts in <strong>&lt;15 minutes</strong>, and targets a unit cost of <strong>&lt;$1.50 per strip</strong>, making community screening viable for donor-dependent health systems.</p>
-                        </div>
-                    </div>
-
-                    <!-- Section 3 -->
-                    <h3>3. Stakeholder & Target User Matrix</h3>
-                    <div class="table-responsive" style="margin-bottom: 2rem;">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Stakeholder Persona</th>
-                                    <th>Role & Organization</th>
-                                    <th>Primary Pain Points</th>
-                                    <th>Strategic Product Value</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="font-weight: 700; color: white;">NTP Directors</td>
-                                    <td>Health Ministry Officials</td>
-                                    <td>High diagnostic cost per case; unreached rural populations.</td>
-                                    <td>Scalable diagnostic coverage; 60% lower cost per case detected.</td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 700; color: white;">Global Donors</td>
-                                    <td>Global Fund / USAID</td>
-                                    <td>High capital expenditure for instrument-heavy platforms.</td>
-                                    <td>Maximized health ROI per dollar spent; rapid scale in LMICs.</td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 700; color: white;">Primary Nurses</td>
-                                    <td>Field Clinic End-Users</td>
-                                    <td>Complex sample prep; electricity dependence; multi-day wait.</td>
-                                    <td>Equipment-free 15-minute diagnostic cassette requiring minimal training.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- Section 4 -->
-                    <h3>4. Machine Learning Model & SHAP Feature Importance</h3>
-                    <p>To quantify feature impacts on global case detection rates, our Random Forest Regressor was evaluated using country-held-out validation (<strong>R² = 0.50</strong>, <strong>MAE ≈ 8.9%</strong>).</p>
-
-                    <div style="background: rgba(11, 19, 41, 0.9); border: 1px solid rgba(255,255,255,0.08); padding: 1.5rem; border-radius: 14px; margin: 1.25rem 0 2rem 0;">
-                        <h4 style="color: white; font-size: 0.95rem; margin-bottom: 1rem;">Core Feature Importances (Mean |SHAP Value|)</h4>
-                        
-                        <div style="margin-bottom: 0.85rem;">
-                            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">
-                                <span>1. Laboratory Budget per 100k Population</span>
-                                <span style="color: #60a5fa;">14.2 SHAP</span>
-                            </div>
-                            <div class="metric-bar-bg" style="height: 8px;"><div class="metric-bar-fill" style="width: 100%;"></div></div>
-                        </div>
-
-                        <div style="margin-bottom: 0.85rem;">
-                            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">
-                                <span>2. Rapid Diagnostic Test (RDx) Coverage %</span>
-                                <span style="color: #34d399;">11.8 SHAP</span>
-                            </div>
-                            <div class="metric-bar-bg" style="height: 8px;"><div class="metric-bar-fill" style="width: 83%; background: linear-gradient(90deg, #10b981, #059669);"></div></div>
-                        </div>
-
-                        <div style="margin-bottom: 0.85rem;">
-                            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">
-                                <span>3. Donor Financing Dependency %</span>
-                                <span style="color: #fbbf24;">8.5 SHAP</span>
-                            </div>
-                            <div class="metric-bar-bg" style="height: 8px;"><div class="metric-bar-fill" style="width: 60%; background: linear-gradient(90deg, #f59e0b, #d97706);"></div></div>
-                        </div>
-
-                        <div style="margin-bottom: 0.85rem;">
-                            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">
-                                <span>4. Total National Budget Share %</span>
-                                <span style="color: #c084fc;">6.2 SHAP</span>
-                            </div>
-                            <div class="metric-bar-bg" style="height: 8px;"><div class="metric-bar-fill" style="width: 44%; background: linear-gradient(90deg, #a855f7, #7e22ce);"></div></div>
-                        </div>
-
-                        <div>
-                            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem;">
-                                <span>5. HIV-TB Co-infection Rate %</span>
-                                <span style="color: #fb7185;">4.1 SHAP</span>
-                            </div>
-                            <div class="metric-bar-bg" style="height: 8px;"><div class="metric-bar-fill" style="width: 29%; background: linear-gradient(90deg, #f43f5e, #be123c);"></div></div>
-                        </div>
-                    </div>
-
-                    <!-- Section 5 -->
-                    <h3>5. Composite Priority Index Ranking Formula</h3>
-                    <p>The <strong>LFA Priority Index</strong> combines four normalized health system indicators into a transparent screening metric:</p>
-                    <div style="background: rgba(11, 19, 41, 0.95); border: 1px solid rgba(59, 130, 246, 0.4); padding: 1.25rem 1.75rem; border-radius: 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; color: #38bdf8; text-align: center; margin: 1.25rem 0 2rem 0; box-shadow: var(--shadow-subtle);">
-                        Priority Score = 0.40(Gap %) + 0.30(Incidence/100k) + 0.20(1 - RDx Access) + 0.10(1 - Lab Budget Share)
-                    </div>
-
-                    <!-- Section 6 -->
-                    <h3>6. Institutional Strategic Decisions (IIT Madras)</h3>
-                    <ul style="line-height: 1.8; margin-bottom: 2rem;">
-                        <li><strong>Explainable ML Choice:</strong> Random Forest + SHAP interpretability selected over deep learning to provide clear, actionable feature rules to health ministry procurement officials.</li>
-                        <li><strong>2021 Baseline Cross-Section:</strong> Selected due to optimal data completeness across all four WHO datasets (burden, notifications, outcomes, and budgets).</li>
-                        <li><strong>Economic Target Alignment:</strong> Aligned analytical sensitivity (LOD 0.6 ng/mL) with a strict unit cost ceiling of <strong>&lt;$1.50 per test</strong> to thrive in donor-dependent health systems.</li>
-                        <li><strong>Phased Market Rollout:</strong> Prioritized Cluster 1 high-burden/high-gap nations (Papua New Guinea, Myanmar, Philippines) for Phase 1 clinical trial sites.</li>
-                    </ul>
-
-                    <!-- Section 7 -->
-                    <h3>7. Clinical & Commercial Rollout Roadmap</h3>
-                    <div class="sliders-grid" style="margin-top: 1.25rem;">
-                        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 12px;">
-                            <div style="color: var(--accent-green); font-weight: 700; font-size: 0.8rem; margin-bottom: 0.3rem;">Q1–Q2 2025</div>
-                            <h4 style="color: white; font-size: 0.95rem; margin-bottom: 0.4rem;">Assay Optimization</h4>
-                            <p style="font-size: 0.83rem; color: #cbd5e1; margin: 0;">Ag85B LFA strip optimization & LOD verification (0.6 ng/mL).</p>
-                        </div>
-
-                        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 12px;">
-                            <div style="color: var(--primary-light); font-weight: 700; font-size: 0.8rem; margin-bottom: 0.3rem;">Q3 2025–Q1 2026</div>
-                            <h4 style="color: white; font-size: 0.95rem; margin-bottom: 0.4rem;">Clinical Validation</h4>
-                            <p style="font-size: 0.83rem; color: #cbd5e1; margin: 0;">Multi-site clinical trial validation & WHO PQ dossier preparation.</p>
-                        </div>
-
-                        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 12px;">
-                            <div style="color: var(--accent-amber); font-weight: 700; font-size: 0.8rem; margin-bottom: 0.3rem;">Q2–Q4 2026</div>
-                            <h4 style="color: white; font-size: 0.95rem; margin-bottom: 0.4rem;">Phase 1 Pilots</h4>
-                            <p style="font-size: 0.83rem; color: #cbd5e1; margin: 0;">Deployment pilots in Tier 1 countries (Papua New Guinea, Myanmar).</p>
-                        </div>
-
-                        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 12px;">
-                            <div style="color: var(--accent-purple); font-weight: 700; font-size: 0.8rem; margin-bottom: 0.3rem;">2027+</div>
-                            <h4 style="color: white; font-size: 0.95rem; margin-bottom: 0.4rem;">Global Scale</h4>
-                            <p style="font-size: 0.83rem; color: #cbd5e1; margin: 0;">Global Fund pooled procurement & LMIC nationwide distribution.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Footer -->
         <footer>
