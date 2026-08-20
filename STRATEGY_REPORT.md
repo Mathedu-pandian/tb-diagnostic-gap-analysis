@@ -17,18 +17,18 @@
 
 ```mermaid
 graph TD
-    subgraph Phase 1: R&D & Assay Engineering
+    subgraph P1["Phase 1: R&D & Assay Engineering"]
         A["Ag85B Antigen Biomarker Target"] --> B["Polyclonal Antibody Selection"]
         B --> C["Gold Nanoparticle Assay (LOD 0.6 ng/mL)"]
     end
 
-    subgraph Phase 2: Market Intelligence & ML Pipeline
+    subgraph P2["Phase 2: Market Intelligence & ML Pipeline"]
         D["WHO Data Ingestion (2000–2024 Panel)"] --> E["Feature Engineering (Gap %, Budget/Capita)"]
         E --> F["Random Forest ML Model (R² = 0.50)"]
         F --> G["SHAP Feature Interpretability"]
     end
 
-    subgraph Phase 3: Market Segmentation & Deployment
+    subgraph P3["Phase 3: Market Segmentation & Deployment"]
         H["K-Means Archetype Clustering (K=4)"] --> I["Composite LFA Priority Ranking"]
         I --> J["Phase 1 Target Market Deployment"]
     end

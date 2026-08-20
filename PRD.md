@@ -97,31 +97,54 @@ graph LR
 
 ```mermaid
 graph TD
-    subgraph Data Layer
-        A1["TB_burden_countries.csv"]
-        A2["TB_notifications.csv"]
-        A3["TB_outcomes.csv"]
-        A4["TB_budget.csv"]
+    subgraph DL["1. Data Ingestion Layer"]
+        A1["TB_burden_countries.csv (Incidence, Mortality, HIV-TB)"]
+        A2["TB_notifications.csv (Case Counts, RDx Access)"]
+        A3["TB_outcomes.csv (Treatment Success Rates)"]
+        A4["TB_budget.csv (Lab Budget per 100k, Donor %)"]
     end
 
-    subgraph Analytics & ML Processing
-        B1["Feature Engineering (Gap %, Budget/Capita)"]
-        B2["Random Forest Regressor (Out-of-Fold Cross Validation)"]
+    subgraph ML["2. Analytics & ML Pipeline"]
+        B1["Feature Engineering (Gap %, Budget Share)"]
+        B2["Random Forest Regressor (R² = 0.50)"]
         B3["SHAP Feature Interpretability Engine"]
         B4["K-Means Archetype Clustering (K=4)"]
     end
 
-    subgraph UI & Web Dashboard (Client-Side)
-        C1["KPI Metric Cards"]
+    subgraph UI["3. Web Dashboard (Client-Side HTML5/JS)"]
+        C1["KPI Metric Hero Cards"]
         C2["Priority Screener Table + Multi-Column Sort"]
-        C3["Real-Time Weight Simulator Sliders"]
+        C3["Real-Time Strategy Weight Simulator Sliders"]
         C4["Country Profile Modal Drawer"]
-        C5["Chart.js Visualizations"]
+        C5["Chart.js Visualizations & CSV Exporter"]
     end
 
-    Data Layer --> Analytics & ML Processing
-    Analytics & ML Processing --> UI & Web Dashboard (Client-Side)
+    A1 --> B1
+    A2 --> B1
+    A3 --> B1
+    A4 --> B1
+    B1 --> B2
+    B2 --> B3
+    B3 --> B4
+    B4 --> C1
+    B4 --> C2
+    B4 --> C3
+    B4 --> C4
+    B4 --> C5
 ```
+
+### 📊 System Architecture & Data Schema Breakdown
+
+| Component Layer | Asset / Module | Input Schema / Protocol | Output / Functional Spec |
+| :--- | :--- | :--- | :--- |
+| **Data Layer** | `TB_burden_countries.csv` | WHO 2000–2024 Panel Data | Baseline country incidence (`e_inc_100k`) & mortality rates. |
+| **Data Layer** | `TB_notifications.csv` | WHO Notification Panel | Case notification totals (`c_newinc`) & rapid test % (`rdx_coverage`). |
+| **Data Layer** | `TB_budget.csv` | WHO Financial Panel | Lab budget allocation per 100k population (`budget_lab_per100k`). |
+| **Analytics Layer** | Feature Engineering | Raw WHO CSV metrics | Diagnostic Gap % (`(inc - notif)/inc * 100`) & Lab Budget share. |
+| **Analytics Layer** | Random Forest Regressor | Pooled 2015–2022 panel data | Out-of-fold case detection predictions ($R^2 = 0.50$, $\text{MAE} \approx 8.9\%$). |
+| **Analytics Layer** | SHAP Interpretability | TreeSHAP Explainer | SHAP feature ranking metrics (Lab Budget = 14.2, RDx = 11.8). |
+| **Analytics Layer** | K-Means Clustering | Standardized health features | 4 distinct country archetypes ($K=4$). |
+| **Presentation Layer**| Interactive Web App | Client-side JS (`dashboard/index.html`) | Real-time weight sliders, table sorting, country drawer modal. |
 
 ---
 
