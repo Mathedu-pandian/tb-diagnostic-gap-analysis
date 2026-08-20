@@ -9,7 +9,7 @@
 
 > [!IMPORTANT]
 > **Executive Summary & Mission Objective**  
-> Every year, over **3.0 million active Tuberculosis (TB) cases** estimated by the World Health Organization (WHO) remain undetected by health systems globally. This report bridges **benchtop bio-engineering** (a gold nanoparticle-based polyclonal antibody lateral flow immunoassay for the Ag85B antigen; LOD = 0.6 ng/mL, R² = 0.972 developed at **IIT Madras**) with **global epidemiological data science** to construct an evidence-based deployment strategy targeting high-impact health systems.
+> Every year, over **2.3 million active Tuberculosis (TB) cases** estimated by the World Health Organization (WHO) remain undetected by health systems globally. This report bridges **benchtop bio-engineering** (a gold nanoparticle-based polyclonal antibody lateral flow immunoassay for the Ag85B antigen; LOD = 0.6 ng/mL, R² = 0.972 developed at **IIT Madras**) with **global epidemiological data science** to construct an evidence-based deployment strategy targeting high-impact health systems.
 
 ---
 
