@@ -1,7 +1,7 @@
 # Global TB Diagnostic Gap & Point-of-Care Market Intelligence Strategy
 
-> **Project Document:** IIT Madras Research Group — Translational Diagnostic Product Strategy & Global Market Intelligence Report  
-> **Lead Investigator:** Mathedu Pandian (Maddy) | MS by Research, Biomedical Engineering, IIT Madras  
+> **Project Document:**  Translational Diagnostic Product Strategy & Global Market Intelligence Report  
+> **Lead Investigator:** Mathana Vetrivel P| MS by Research, Biomedical Engineering, IIT Madras  
 > **Institutional Context:** Department of Biomedical Engineering, Indian Institute of Technology Madras  
 > **Live Interactive Dashboard:** [`dashboard/index.html`](file:///D:/tb%20dataset/dashboard/index.html)  
 
@@ -9,9 +9,9 @@
 
 ## Executive Summary
 
-Over **3 million active tuberculosis (TB) cases** estimated by the World Health Organization (WHO) go undetected or unreported every year. This massive "missing cases" gap is primarily concentrated in low- and middle-income countries (LMICs) with limited laboratory infrastructure, high donor dependency, and centralized diagnostic bottlenecks.
+Over **3 million active tuberculosis (TB) cases** estimated by the World Health Organization (WHO) go undetected or unreported every year. This massive "missing cases" gap is primarily concentrated in low- and middle-income countries (LMICs) with limited laboratory infrastructure and centralized diagnostic bottlenecks.
 
-This project bridges **benchtop bio-engineering** (developing a gold nanoparticle-based polyclonal antibody lateral flow immunoassay for the Ag85B antigen; $LOD = 0.6\text{ ng/mL}$, $R^2 = 0.972$ at IIT Madras) with **global market intelligence**. By aggregating 24 years of WHO open data (2000–2024 across 200+ countries), our team built an end-to-end Machine Learning and prioritization pipeline to identify top target countries where low-cost, point-of-care (POC) rapid diagnostic test strips deliver maximum epidemiological impact and product market fit.
+This project bridges **benchtop bio-engineering** (developing a gold nanoparticle-based polyclonal antibody lateral flow immunoassay for the Ag85B antigen; $LOD = 0.6\text{ ng/mL}$, $R^2 = 0.972$ at IIT Madras) with **global market intelligence**. By aggregating 24 years of WHO open data (2000–2024 across 200+ countries), I built an end-to-end Machine Learning and prioritization pipeline to identify top target countries where low-cost, point-of-care (POC) rapid diagnostic test strips deliver maximum epidemiological impact and product market fit.
 
 ---
 
