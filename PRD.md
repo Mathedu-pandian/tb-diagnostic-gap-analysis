@@ -20,8 +20,8 @@ An estimated **3.0+ million active Tuberculosis (TB) cases** are missed annually
 1. **Physical Product (Ag85B LFA Cassette):** An equipment-free, point-of-care rapid diagnostic test strip utilizing gold nanoparticle-conjugated polyclonal antibodies targeting the secreted **Ag85B antigen** in human samples. Delivers visual readouts in **<15 minutes** at a production cost target of **<$1.50 per test**.
 2. **Software Product (Diagnostic Intelligence Platform):** A client-side machine learning and prioritization system built on 24 years of WHO Global TB Programme open data (2000–2024 across 200+ countries) to identify high-impact deployment markets.
 
-### 1.3 Intellectual Property (IP) & International Patent Rights Expansion Strategy
-While initial priority patent applications are established via the Indian Patent Office (IPO, Chennai), securing commercial exclusivity and achieving sustainable **Product-Market Fit (PMF)** requires strategic international patent protection beyond India prior to regional market entry:
+### 1.3 Illustrative Intellectual Property (IP) & International Patent Rights Expansion Strategy
+While initial priority patent applications are established via the Indian Patent Office, securing commercial exclusivity and achieving sustainable **Product-Market Fit (PMF)** requires strategic international patent protection beyond India prior to regional market entry:
 - **WIPO PCT International Filing:** File via the Patent Cooperation Treaty (PCT) system within the 12-month priority window to secure global priority rights across 150+ contracting states.
 - **Sub-Saharan Africa Regional IP (ARIPO / OAPI):** Regional patent entry covering high-burden, donor-dependent target markets (e.g. DR Congo `COD`, Angola `AGO`, South Sudan `SSD`, Lesotho `LSO`).
 - **Southeast Asia & Western Pacific (ASEAN / WPR):** Direct national phase patent filings in top priority screening targets (e.g. Philippines `PHL`, Myanmar `MMR`, Papua New Guinea `PNG`, Cambodia `KHM`).
