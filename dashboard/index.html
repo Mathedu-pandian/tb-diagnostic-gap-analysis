@@ -646,7 +646,7 @@
             <button class="tab-btn active" onclick="switchTab('target-matrix', this)">🎯 Priority Target Matrix</button>
             <button class="tab-btn" onclick="switchTab('ml-insights', this)">🧠 ML & SHAP Drivers</button>
             <button class="tab-btn" onclick="switchTab('archetypes', this)">🧩 Country Archetypes</button>
-            <button class="tab-btn" onclick="switchTab('prd-overview', this)">📋 Team Strategy Document</button>
+            <button class="tab-btn" onclick="switchTab('prd-overview', this)">📊 Strategy Report</button>
         </div>
 
         <!-- Tab 1: Priority Target Matrix -->
@@ -801,28 +801,88 @@
             </div>
         </div>
 
-        <!-- Tab 4: Product Strategy Overview -->
+        <!-- Tab 4: Comprehensive Strategy Report -->
         <div id="prd-overview" class="tab-content">
             <div class="section-card">
                 <div class="prd-section">
-                    <h2>📋 Global TB Diagnostic Gap & Strategy Report</h2>
-                    <p><em>Indian Institute of Technology Madras</em></p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <h2 style="font-size: 1.6rem; color: white;">📊 Global TB Diagnostic Gap & Point-of-Care Strategy Report</h2>
+                            <p style="color: var(--primary); font-weight: 600; margin-top: 0.2rem;">Lead Investigator: Mathana Vetrivel • Indian Institute of Technology Madras</p>
+                        </div>
+                        <a href="../STRATEGY_REPORT.md" target="_blank" class="btn btn-outline" style="font-size: 0.82rem;">📄 Download Raw Markdown</a>
+                    </div>
 
-                    <h3>1. Executive Vision</h3>
-                    <p>To eliminate the 3+ million annual undetected tuberculosis cases by deploying low-cost, gold-nanoparticle polyclonal antibody lateral flow immunoassays (Ag85B antigen) into health systems with the highest diagnostic infrastructure friction.</p>
+                    <div style="background: rgba(59, 130, 246, 0.1); border-left: 4px solid var(--primary); padding: 1.25rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <h4 style="color: white; margin-bottom: 0.35rem;">🎯 Mission Objective & Executive Summary</h4>
+                        <p style="font-size: 0.92rem; color: #cbd5e1; margin: 0;">Every year, over <strong>3.0 million active Tuberculosis (TB) cases</strong> estimated by the WHO remain undetected globally. This report bridges <strong>benchtop bio-engineering</strong> (gold nanoparticle-based polyclonal antibody LFA for the Ag85B antigen; LOD = 0.6 ng/mL, R² = 0.972 at IIT Madras) with <strong>global epidemiological data science</strong> to establish an evidence-based deployment strategy targeting high-friction health systems.</p>
+                    </div>
 
-                    <h3>2. Product Value Proposition & Specifications</h3>
-                    <ul>
-                        <li><strong>Target Antigen:</strong> Ag85B Secreted Biomarker</li>
-                        <li><strong>Analytical Sensitivity (LOD):</strong> 0.6 ng/mL ($R^2 = 0.972$)</li>
-                        <li><strong>Form Factor:</strong> Equipment-free, cassette-based lateral flow test (readout in <15 minutes)</li>
-                        <li><strong>Cost Target:</strong> <$1.50 per strip (vs $10–30 for PCR/GeneXpert)</li>
+                    <h3>1. Translational Value Chain & Bio-Engineering Context</h3>
+                    <p>Our translational model spans 3 integrated phases from wet-lab assay optimization to international health procurement:</p>
+                    <ul style="line-height: 1.8;">
+                        <li><strong>Phase 1 (Assay Engineering):</strong> Ag85B secreted biomarker target validation with polyclonal antibody gold nanoparticle cassettes (LOD 0.6 ng/mL).</li>
+                        <li><strong>Phase 2 (Market Intelligence):</strong> WHO 24-year panel data ingestion (2000–2024), feature engineering, Random Forest predictive modeling (R² = 0.50), and SHAP attribution.</li>
+                        <li><strong>Phase 3 (Target Deployment):</strong> K-Means archetype clustering (K=4), multi-metric composite priority scoring, and phased market rollout.</li>
                     </ul>
 
-                    <h3>3. Research Team Strategic Rationale</h3>
+                    <h3>2. Economic Market Fit & Diagnostic Bottlenecks</h3>
+                    <div class="two-col-grid" style="margin: 1.25rem 0;">
+                        <div style="background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.25); padding: 1.25rem; border-radius: 10px;">
+                            <h4 style="color: var(--accent-rose); margin-bottom: 0.5rem;">⚠️ Centralized Lab Bottlenecks</h4>
+                            <p style="font-size: 0.88rem; color: #cbd5e1; margin: 0;">Conventional diagnostics rely on sputum microscopy (low sensitivity ~50%) or molecular GeneXpert PCR ($10–$30/test, continuous power requirement, specialized operators). In LMICs, patient loss-to-follow-up occurs before lab results return.</p>
+                        </div>
+                        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); padding: 1.25rem; border-radius: 10px;">
+                            <h4 style="color: var(--accent-green); margin-bottom: 0.5rem;">💡 Point-of-Care (POC) Value Proposition</h4>
+                            <p style="font-size: 0.88rem; color: #cbd5e1; margin: 0;">Our cassette LFA operates <strong>equipment-free</strong>, delivers visual diagnostic readouts in <strong><15 minutes</strong>, and targets a unit cost of <strong><$1.50 per strip</strong>, making community screening viable for donor-dependent health systems.</p>
+                        </div>
+                    </div>
+
+                    <h3>3. Stakeholder & Target User Matrix</h3>
+                    <div class="table-responsive" style="margin-bottom: 1.5rem;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Stakeholder Persona</th>
+                                    <th>Role & Organization</th>
+                                    <th>Primary Pain Points</th>
+                                    <th>Strategic Product Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="font-weight: 700;">NTP Directors</td>
+                                    <td>Health Ministry Officials</td>
+                                    <td>High diagnostic cost per case; unreached rural populations.</td>
+                                    <td>Scalable diagnostic coverage; 60% lower cost per case detected.</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 700;">Global Donors</td>
+                                    <td>Global Fund / USAID</td>
+                                    <td>High capital expenditure for instrument-heavy platforms.</td>
+                                    <td>Maximized health ROI per dollar spent; rapid scale in LMICs.</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 700;">Primary Nurses</td>
+                                    <td>Field Clinic End-Users</td>
+                                    <td>Complex sample prep; electricity dependence; multi-day wait.</td>
+                                    <td>Equipment-free 15-minute diagnostic cassette requiring minimal training.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>4. Composite Priority Score Ranking Formula</h3>
+                    <p>The <strong>LFA Priority Index</strong> combines four normalized health system indicators into a transparent screening metric:</p>
+                    <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(59, 130, 246, 0.3); padding: 1rem 1.5rem; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: #38bdf8; text-align: center; margin: 1rem 0;">
+                        Priority Score = 0.40(Gap %) + 0.30(Incidence/100k) + 0.20(1 - RDx Access) + 0.10(1 - Lab Budget Share)
+                    </div>
+
+                    <h3>5. Key Strategic Decisions (IIT Madras)</h3>
                     <ul>
-                        <li><strong>Model Selection:</strong> Random Forest + SHAP chosen over black-box models to provide clear, interpretable feature rules for health ministry procurement officials.</li>
-                        <li><strong>Cross-Section Alignment:</strong> 2021 cross-section selected due to optimal data completeness across burden, notifications, outcomes, and budgets.</li>
+                        <li><strong>Explainable ML Choice:</strong> Random Forest + SHAP interpretability selected over deep learning to provide clear, actionable feature rules to health ministry procurement officials.</li>
+                        <li><strong>2021 Baseline Cross-Section:</strong> Selected due to optimal data completeness across all four WHO datasets (burden, notifications, outcomes, and budgets).</li>
+                        <li><strong>Economic Target Alignment:</strong> Aligned analytical sensitivity (LOD 0.6 ng/mL) with a strict unit cost ceiling of <strong><$1.50 per test</strong> to thrive in donor-dependent health systems.</li>
                     </ul>
                 </div>
             </div>
