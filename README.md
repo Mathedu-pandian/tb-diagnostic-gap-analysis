@@ -1,10 +1,11 @@
 # ⚡ Global TB Diagnostic Gap & Point-of-Care Market Intelligence Platform
 
-> **Translating Laboratory Immunoassay Validation into a Global Product & Deployment Strategy**  
+> 🌐 **Live Interactive Dashboard:** [https://Mathedu-pandian.github.io/tb-diagnostic-gap-analysis/](https://Mathedu-pandian.github.io/tb-diagnostic-gap-analysis/)  
 > **Lead Investigator:** Mathana Vetrivel | MS by Research, IIT Madras  
 > **Institution:** Indian Institute of Technology Madras  
 > **GitHub:** [@Mathedu-pandian](https://github.com/Mathedu-pandian)  
 
+[![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-Interactive_Platform-3B82F6?style=for-the-badge&logo=googlechrome&logoColor=white)](https://Mathedu-pandian.github.io/tb-diagnostic-gap-analysis/)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Machine Learning](https://img.shields.io/badge/Scikit--Learn-Random_Forest-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![SHAP Explainability](https://img.shields.io/badge/SHAP-Explainable_AI-00599C?style=for-the-badge)](https://shap.readthedocs.io/)
@@ -14,8 +15,8 @@
 
 ## 🌟 Quick Links & Demonstrations
 
+- 🌐 **[Live Interactive Dashboard (GitHub Pages)](https://Mathedu-pandian.github.io/tb-diagnostic-gap-analysis/)** — Real-time strategy weight simulator, priority ranking matrix, SHAP impact explorer, and country profile drawer.
 - 📄 **[Translational Strategy & Market Intelligence Report (PRD)](PRODUCT_CASE_STUDY.md)** — Detailed Research & Deployment Strategy, Team Decision Rationale, Stakeholder Matrix & Technical Spec.
-- 📊 **[Interactive Product Intelligence Dashboard (`dashboard/index.html`)](dashboard/index.html)** — Live client-side interactive matrix, SHAP impact explorer, and country cluster screener.
 - 📓 **[Jupyter Data Pipeline Notebook](notebooks/TB_Diagnostic_Gap_Analysis.ipynb)** — End-to-end data processing, Random Forest ML model, SHAP plots, and K-Means segmentation.
 - 📈 **[Top 20 Priority Target Dataset](outputs/tb_top20_lfa_targets.csv)** — Exported priority country dataset for low-cost Point-of-Care (POC) deployment.
 

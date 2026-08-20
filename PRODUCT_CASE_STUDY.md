@@ -1,9 +1,9 @@
 # Global TB Diagnostic Gap & Point-of-Care Market Intelligence Strategy
 
+> 🌐 **Live Interactive Platform:** [https://Mathedu-pandian.github.io/tb-diagnostic-gap-analysis/](https://Mathedu-pandian.github.io/tb-diagnostic-gap-analysis/)  
 > **Project Document:** IIT Madras — Translational Diagnostic Product Strategy & Global Market Intelligence Report  
 > **Lead Investigator:** Mathana Vetrivel | MS by Research, IIT Madras  
 > **Institutional Context:** Indian Institute of Technology Madras  
-> **Live Interactive Dashboard:** [`dashboard/index.html`](file:///D:/tb%20dataset/dashboard/index.html)  
 
 ---
 
